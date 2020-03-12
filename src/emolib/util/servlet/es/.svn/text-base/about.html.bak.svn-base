@@ -1,0 +1,121 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!--
+Design by Free CSS Templates
+http://www.freecsstemplates.org
+Released for free under a Creative Commons Attribution 2.5 License
+
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Emolib analysis service</title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<link href="../default.css" rel="stylesheet" type="text/css" media="screen" />
+
+<script language="javascript" type="text/javascript" src="formval.js"></script>
+
+</head>
+
+<body>
+<!-- start header -->
+<div id="header">
+        <div id="logo">
+                <h1><font color="steelblue">Emo</font><font color="lightsteelblue">Lib</font></h1>
+                <p>Identificación de emociones a partir de texto</p>
+        </div>
+        <div id="menu">
+                <ul>
+                        <li><a href="index.html">Demo</a></li>
+                        <li class="current_page_item"><a href="about.html">Acerca de</a></li>
+                </ul>
+        </div>
+</div>
+<!-- end header -->
+<!-- start page -->
+<div id="page">
+        <!-- start content -->
+        <div id="content">
+                <div class="post greenbox">
+                        <div class="title">
+                                <h1>Acerca de</h1>
+                        </div>
+                        <div class="entry">
+                                <p>EmoLib es una librería que extrae el contenido emocional de un texto de entrada etiquetándolo de acuerdo con el afecto con el que está escrito o que se está transmitiendo.</p>
+                                <p>La estructura de procesado de EmoLib está construida a partir de varias clases que definen un entorno modular, llamado "pipeline" debido a la secuencialidad del proceso de etiquetaje. Éste es el <b>AffectiveTagger</b>.</p>
+                                <p>Las clases que definen la arquitectura de EmoLib están descritas a continuación:
+                                <ul>
+                                    <li>
+                                        <b>Tokenizer</b> - Divide un texto en
+                                        unidades individuales, llamadas tokens.
+                                        Estos tokens están expresados en patrones
+                                        regulares tal y como establece
+                                        la gramática del lenguaje.
+                                        Ésta es la ENTRADA del pipeline.
+                                    </li>
+                                    <li>
+                                        <b>Sentence Splitter</b> - Segmenta
+                                        el texto de entrada en párrafos y frases.
+                                    </li>
+                                    <li>
+                                        <b>Part-Of-Speech Tagger</b> - Desambigua la
+                                        función de nombres, verbos y adjetivos en la frase de acuerdo con el contexto.
+                                    </li>
+                                    <li>
+                                        <b>Word Sense Disambiguator</b> - Determina
+                                        cual es la correcta acepción de una palabra de acuerdo con el contexto y completa la palabra en cuestión con el conjunto de sinónimos adecuado.
+                                    </li>
+                                    <li>
+                                        <b>Stemmer</b> - Elimina el la flexión de las palabras
+                                        para agrupar aquellas que comparten un mismo significado, mejorando así la recuperación de la información (IR).
+                                    </li>
+                                    <li>
+                                        <b>Emotional Keyword Spotter</b> - Determina
+                                        las dimensiones emocionales de las palabras que tienen un contenido afectivo.
+                                    </li>
+                                    <li>
+                                        <b>Statistic</b> - Calcula
+                                        la media de las dimensiones emocionales de las palabras del texto.
+                                    </li>
+                                    <li>
+                                        <b>Classifier</b> - Etiqueta el texto con la etiqueta afectiva
+                                        más apropiada de acuerdo a los atributos afectivos.
+                                    </li>
+                                    <li>
+                                        <b>Affective Formatter</b> - Presenta los resultados obtenidos.
+                                        Es la SALIDA del pipeline.
+                                    </li>
+                                </ul>
+                                </p>
+
+                                <p>Por favor, tenga cuidado haciendo "copiar-pegar" de algunos textos directos de Internet ya que
+                                algunos caracteres pueden causar un mal funcionamiento en el sistema.</p>
+
+                                <p>EmoLib está actualmente siendo desarrollado por
+                                <a href="http://www.salle.url.edu/~atrilla/">Alexandre Trilla</a> como parte de su 
+                                tesis doctoral, bajo la supervisión  
+                                de <a href="http://www.salle.url.edu/~falias">Francesc Al&iacute;as</a> en
+                                <a href="http://www.salle.url.edu/">Enginyeria i Arquitectura La Salle</a>,
+                                Universitat Ramon Llull, Barcelona, Spain.
+                                No dude en contactar con ellos para cualquier comentario o sugerencia de cualquier tipo.</p>
+                        </div>
+
+                        <div class="btm">
+                                <div class="l">
+                                        <div class="r">
+                                                <p class="meta"></p>
+                                        </div>
+                                </div>
+                        </div>
+                </div>
+        </div>
+        <!-- end content -->
+</div>
+<!-- end page -->
+<div style="clear: both;">&nbsp;</div>
+<div id="footer">
+        <p>Copyright &copy; 2007-2011 Enginyeria i Arquitectura La Salle (Universitat Ramon Llull)<br>
+        Éste servicio está mantenido por <a href="http://www.salle.url.edu/~atrilla/">Alexandre Trilla</a> <a href="mailto:atrilla@salle.url.edu">(atrilla@salle.url.edu)</a></p>
+</div>
+</body>
+</html>

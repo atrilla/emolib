@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="ASCII"?>
+
+<!--
+
+    File    : emolib.config.xml
+    Created : 13-Nov-2008
+    By      : atrilla
+  
+    Emolib - Emotional Library
+  
+    Copyright (c) 2008 Alexandre Trilla &
+    2007-2011 Enginyeria i Arquitectura La Salle (Universitat Ramon Llull)
+  
+    This file is part of Emolib.
+  
+    You should have received a copy of the rights granted with this
+    distribution of EmoLib. See COPYING.
+
+-->
+
+<!--
+    EmoLib Configuration file
+-->
+
+<config>        
+    
+    <!-- ******************************************************** -->
+    <!-- Classifier evaluation                                    -->
+    <!-- ******************************************************** -->
+
+    <component name="kfoldcv" type="emolib.AffectiveTagger">
+        <property name="emolib_path" value="EMOLIB_PATH"/>
+        <propertylist name="pipeline">
+            <item>english_tokenizer</item>
+            <item>sentence_splitter</item>
+            <item>postagger_stanford_english</item>
+            <item>word_sense_disambiguator_simlib_en</item>
+            <item>stemmer_snowball_english</item>
+            <item>eks_anew</item>
+            <item>arithmetic_mean_statistics</item>
+        </propertylist>
+    </component>
+
+
+    <!-- ******************************************************** -->
+    <!-- The Tagger configuration                                 -->
+    <!-- ******************************************************** -->
+
+    <component name="spanish_tagger" type="emolib.AffectiveTagger">
+        <property name="language" value="Spanish"/>
+        <property name="emolib_path" value="EMOLIB_PATH"/>
+        <propertylist name="pipeline">
+        <item>spanish_tokenizer</item>
+        <item>sentence_splitter</item>
+        <item>postagger_qtag_spanish</item>
+        <item>word_sense_disambiguator_simlib_es</item>
+        <item>stemmer_snowball_spanish</item>
+        <item>eks_answ</item>
+        <item>arithmetic_mean_statistics</item>
+        <item>nc_semeval07_classifier</item>
+        <item>printer</item>
+        <item>results_writer</item>
+        </propertylist>
+    </component>
+
+    <component name="english_tagger" type="emolib.AffectiveTagger">
+        <property name="language" value="English"/>
+        <property name="emolib_path" value="EMOLIB_PATH"/>
+        <propertylist name="pipeline">
+        <item>english_tokenizer</item>
+        <item>sentence_splitter</item>
+        <item>postagger_stanford_english</item>
+        <item>word_sense_disambiguator_simlib_en</item>
+        <item>stemmer_snowball_english</item>
+        <item>eks_anew</item>
+        <item>arithmetic_mean_statistics</item>
+        <item>nc_semeval07_classifier</item>
+        <item>printer</item>
+        <item>results_writer</item>
+        </propertylist>
+    </component>
+
+
+    <!-- ******************************************************** -->
+    <!-- The Lexer configuration                                  -->
+    <!-- ******************************************************** -->
+
+    <component name="spanish_tokenizer" type="emolib.tokenizer.lexer.spanish.SpanishLexer">
+        <property name="positive_modifier_1" value="0.25"/>
+        <property name="positive_modifier_2" value="0.40"/>
+        <property name="positive_modifier_3" value="0.66"/>
+        <property name="negative_modifier_1" value="-0.25"/>
+        <property name="negative_modifier_2" value="-0.40"/>
+        <property name="negative_modifier_3" value="-0.66"/>
+        <property name="negation" value="-1"/>
+    </component>
+
+    <component name="english_tokenizer" type="emolib.tokenizer.lexer.english.EnglishLexer">
+        <property name="positive_modifier_1" value="0.25"/>
+        <property name="positive_modifier_2" value="0.40"/>
+        <property name="positive_modifier_3" value="0.66"/>
+        <property name="negative_modifier_1" value="-0.25"/>
+        <property name="negative_modifier_2" value="-0.40"/>
+        <property name="negative_modifier_3" value="-0.66"/>
+        <property name="negation" value="-1"/>
+    </component>
+
+
+    <!-- ******************************************************** -->
+    <!-- The Sentence Splitter configuration                      -->
+    <!-- ******************************************************** -->
+
+    <component name="sentence_splitter" type="emolib.splitter.bdt.SentenceSplitterBDT"/>
+    
+
+    <!-- ******************************************************** -->
+    <!-- The Part-Of-Speech Tagger configuration                  -->
+    <!-- ******************************************************** -->
+
+    <component name="postagger_qtag_spanish" type="emolib.pos.qtag.SpanishQTag">
+        <property name="resources_path" value="EMOLIB_PATH/data/qtag-spanish/"/>
+    </component>
+    
+    <component name="postagger_stanford_english" type="emolib.pos.stanford.EnglishStanford">
+        <property name="resources_path" value="EMOLIB_PATH/data/stanford-postagger/english/bidirectional-wsj-0-18.tagger"/>
+    </component>
+
+
+    <!-- ******************************************************** -->
+    <!-- The Word Sense Disambiguator configuration               -->
+    <!-- ******************************************************** -->
+
+    <component name="word_sense_disambiguator_openthes_es" type="emolib.wsd.openthes.OpenThesWSD">
+        <property name="thesauruspath" value="EMOLIB_PATH/data/openthesaurus-es/Thesaurus_es_ES.txt"/>
+        <property name="sentence_level" value="false"/>
+        <property name="analyze_verbs" value="false"/>
+        <property name="analyze_adjectives" value="false"/>
+    </component>
+
+    <component name="word_sense_disambiguator_simlib_en" type="emolib.wsd.simlib.SimLibWSD">
+        <property name="wn_index_path" value="EMOLIB_PATH/data/wn_index_simlib"/>
+        <property name="use_nouns" value="true"/>
+        <property name="use_verbs" value="true"/>
+        <property name="use_adjectives" value="true"/>
+    </component>
+
+    <component name="word_sense_disambiguator_simlib_es" type="emolib.wsd.simlib.SimLibWSD">
+        <property name="wn_index_path" value="EMOLIB_PATH/data/wn_index_simlib_es"/>
+        <property name="use_nouns" value="true"/>
+        <property name="use_verbs" value="true"/>
+        <property name="use_adjectives" value="true"/>
+    </component>
+
+
+    <!-- ******************************************************** -->
+    <!-- The Word Association configuration                       -->
+    <!-- ******************************************************** -->
+
+    <component name="word_association_en" type="emolib.wordassoc.wordassocnet.WordAssocNet">
+    </component>
+
+
+    <!-- ******************************************************** -->
+    <!-- The Stemmer configuration                                -->
+    <!-- ******************************************************** -->
+
+    <component name="stemmer_snowball_spanish" type="emolib.stemmer.snowball.GenericSnowballStemmer">
+        <property name="language" value="spanish"/>
+        <property name="iterations" value="4"/>
+    </component>
+
+    <component name="stemmer_snowball_english" type="emolib.stemmer.snowball.GenericSnowballStemmer">
+        <property name="language" value="english"/>
+        <property name="iterations" value="4"/>
+    </component>
+    
+
+    <!-- ******************************************************** -->
+    <!-- The Emotional Keyword Spotter configuration              -->
+    <!-- ******************************************************** -->
+
+    <component name="eks_answ" type="emolib.eks.anlw.EmotionalKeywordSpotterANLW">
+        <property name="dictionary" value="EMOLIB_PATH/data/ANSW.dat"/>
+        <property name="conflation_weight" value="1"/>
+    </component>
+
+    <component name="eks_anew" type="emolib.eks.anlw.EmotionalKeywordSpotterANLW">
+        <property name="dictionary" value="EMOLIB_PATH/data/ANEW.dat"/>
+        <property name="conflation_weight" value="1"/>
+    </component>
+
+
+    <!-- ******************************************************** -->
+    <!-- The results outputter formatter configuration            -->
+    <!-- ******************************************************** -->
+
+    <component name="results_writer" type="emolib.formatter.xml.XMLFormatter">
+        <property name="xmlresultspath" value="EMOLIB_PATH"/>
+    </component>
+
+ 
+    <!-- ******************************************************** -->
+    <!-- The emotional statistics configuration                   -->
+    <!-- ******************************************************** -->
+
+    <component name="arithmetic_mean_statistics" type="emolib.statistic.average.ArithmeticMean">
+        <property name="threshold" value="5.75"/>
+    </component>
+
+
+    <!-- ******************************************************** -->
+    <!-- The classifier configuration                             -->
+    <!-- ******************************************************** -->
+
+    <component name="interval_based_classifier" type="emolib.classifier.heuristic.FiveIntervalsKE">
+    </component>
+
+    <component name="nc_semeval07_classifier" type="emolib.classifier.machinelearning.NearestCentroid">
+    <property name="num_emo_dims" value="2"/>
+        <property name="external_file" value="EMOLIB_PATH/data/trainedc/nc.3sentiment.semeval07.xml"/>
+    </component>
+   
+
+    <!-- ******************************************************** -->
+    <!-- The Printer configuration                                -->
+    <!-- ******************************************************** -->
+
+    <component name="printer" type="emolib.util.printer.Printer">
+        <property name="echo_synonyms" value="false"/>
+        <property name="echo_number_of_words" value="false"/>
+        <property name="echo_modifiers" value="false"/>
+    <property name="echo_emotional_words" value="false"/>
+    <property name="echo_stems" value="false"/>
+    <property name="echo_stemmed_synonyms" value="false"/>
+    <property name="echo_word_class" value="false"/>
+    <property name="echo_word_pos" value="false"/>
+    </component>
+    
+</config>

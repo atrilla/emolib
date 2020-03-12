@@ -1,0 +1,218 @@
+/**
+ * File    : README
+ * Created : 13-Feb-2009
+ * By      : atrilla
+ *
+ * Readme file that describes the evaluation of EmoLib with the
+ * Semeval 2007 task dataset.
+ *
+ * Copyright (c) 2009 Alexandre Trilla &
+ * 2007-2009 Enginyeria i Arquitectura La Salle (Universitat Ramon Llull)
+ *
+ * This file is part of Emolib.
+ *
+ * You should have received a copy of the rights granted with this
+ * distribution of EmoLib. See COPYING.
+ */
+
+Semeval 2007 Task
+=================
+
+Since the dataset provided in the Semeval 2007 task consists of plain data,
+some Unix tools (shell scripts) are used in favor of simplicity.
+
+This README file describes the process carried out in order to determine
+the performance degree of EmoLib with the Semeval'07 dataset. This dataset
+was used when scoring the performance of the previous version of EmoLib,
+developed by David Garcia as his Master's Thesis. It is available under the
+"dat/dataset/semeval07task" folder.
+
+The whole dataset can be obtained at the official web site for the Semeval'07
+task at:
+
+	http://www.cse.unt.edu/~rada/affectivetext/
+
+
+The results obtained so far with EmoLib [Garcia and Alias, 2008] are
+Knowledge-based and used the training headlines provided in the workshop,
+available in the "AffectiveText.trial" folder.
+
+The process is described as follows:
+
+1.- The sentences must be formatted to a plain text file instead of a XML
+file. Thus:
+
+	removeTags.sh dat/dataset/semeval07task/affectivetext_trial.xml >
+		sentences_not_tagged.txt
+
+2.- Process the sentences with EmoLib in order to tag them with the most
+appropriate emotion being conveyed. This process is detailed in the
+"emolib.util.eval.ExampleTextFile" class. This step ends with the obtention 
+of a results file named "emolib.results.xml".
+
+3.- Extract the emotions from the results and leave them (ordered) in a plain
+text file:
+
+	extractCategory.sh emolib.results.xml > plain_predicted_emotions.txt
+
+At this point, the information that EmoLib could provide is ready. Now the
+Semeval'07 training dataset has to be prepared in order to score the performance.
+Step number 4 takes the most significant emotion provided by the dataset, say
+the emotion with the highest score. The problem is that the neutral
+emotion that EmoLib predicts is not included in the set of emotions of
+the Semeval dataset. Then, Step 4 should be skipped until a wider range of
+emotions was available for EmoLib.
+
+4.- Now the fields (numbers separated by spaces) given in the
+"affectivetext_trial.emotions.gold" file have to be expanded into the most
+significant emotion, which is determined by the biggest number.
+In order to do so:
+
+	expandEmotions.sh affectivetext_trial.emotions.gold > plain_emotions.txt
+
+As an attempt to surpass this problem, Step 5 introduces a process that takes
+into account only the valence of the headlines and tags it according to an
+arbitrary set of ranges for the emotions. This process should be improved with
+some machine learning techniques.
+
+5.- The Semeval'07 file containing the valences of the headlines should be
+processed by an unidimentional rules classifier (interval-based) in order
+to obtain a set of tags (five different emotions) adequate to be compared with 
+the previous prediction produced in Step 3.
+This choice, though, cannot be resolved coherently with the valence intervals
+defined in the cited article. Anyway, in order to do so:
+
+	classifyValence.sh affectivetext_trial.valence.gold > plain_emotions.txt
+
+The approach that is most similar to the approach followed in 
+[Garcia and Alias, 2008] is introduced in Step 6. The emotional intervals 
+defined in the article are based on scientific work, but they are lastly tuned
+manually in order to obtain a most realistic dataset. Since this manually
+produced dataset is no longer available, a systematic process is proposed in
+this sixth step.
+
+6.- The headlines evaluated with the weighed contribution of six emotions
+(affectivetext_trial.emotions.gold) are taken for vectors, summed and
+represented in a circumplex model [Genereux and Evans, 2006]. For each of
+these representations the Nearest Neighbor (nearest EmoLib emotion) is computed
+and used to tag the representation with the appropriate emotion. Then,
+follow the instructions (synopsis) of the 
+"emolib.util.eval.semeval.SemevalCorpusCategorizerNN" class
+in order to obtain a file containing the categories of the Semeval corpus
+adapted to the emotions used by EmoLib.
+
+7.- Since the emotions obtained with one method or the other, either with the
+Scherer's circumplex or the Whissell's dictionary, don't match in all cases,
+the class "emolib.util.eval.semeval.ExtractCoincidences" takes the matching
+category-tag pair in order to extract the least confusing emotions. See the
+class' documentation for further details.
+
+8.- Finally, a confusion matrix has to be constructed in order to quantify the
+performance (accuracy) degree of the current EmoLib configuration. Then, follow
+the instructions (synopsis) of the "emolib.eval.ConfusionMatrixCalculator" class.
+
+
+Note that the trainig corpus, the one used in [Garcia and Alias, 2008], yields
+a deal fewer sentences, especially when only the Whissell and Scherer coincidences
+are accounted. In order to surpass this restriction and obtain reliable statistical
+results, both the training and testing corpora can be accounted thus ending up
+with more than 650 sentences to play with. Bear in mind that the commas blow
+EmoLib, as well as the tab in line 29 and some esoteric phenomena in lines 404
+and 1217. Amazingly, quotation marks have to be removed too and brackets in line
+1216.
+
+In order to perform any k-fold cross-validation process one must
+bear in mind that the resulting corpus may be unbalanced, and in order to
+perform the procedure sensibly one must ensure that all the resulting folds for
+testing MUST have instances (examples) of ALL the categories in the dataset.
+For this reason, the shell script 'balanceDataset.sh' outputs a set of data that
+ensures that within the resulting folds, all categories appear (as long as the
+number of elements and folds makes it possible).
+The resulting dataset contains less instances than the original dataset. This fact
+is due to the intervals used within the script: only the integer part is accounted
+for (say size_of_the_dataset/number_of_folds).
+
+==================================================================================
+
+The results that EmoLib yields are far from good. ANEW and Russell's emotional
+dimentions do not match at all. The resulting cloud of points is very scattered.
+When Russell says that a particular headline belongs to one emotion (because of
+proximity in the circumplex model), the features that EmoLib produces (based on
+the ANEW dictionary) place the headline in a very different and distant location.
+The basic five emotions are distincty placed in the circumplex according to Russell
+while ANEW places all of them in the middle of the plane (neutral affective state).
+Then, the most representative headline for each dimention according to Russell
+is compared to the dimentions given by EmoLib.
+
+The nearest headline to the basic emotion (Russell):
+anger -> 345
+fear -> 761
+sorrow -> 175
+neutral -> 43, 86, 121, 151
+happiness -> 90
+surprise -> 351
+
+==================================================================================
+
+The ANEW dictionary cannot separate emotions successfully, but at first sight
+it can be used for a sentiment classification task. Thus, the emotion
+dimentions retrieved from EmoLib must de joined with the positive or negative 
+sentiment evaluations yielded by Russell's model in order to construct a reliable
+sentiment classifier. The process followed is described below:
+
+1.- The headlines are processed with EmoLib and tagged with the Russell model of
+affect as described above. The two resulting text files (the ground truth and the
+results from the test system) are further processed.
+For valence evaluation, use "sentiment.pl".
+
+2.- The ground truth must be left only with the sentiment categories. Thus, all
+the numeric characters must be deleted and the emotion categories are grouped as:
+	-P (for positive): neutral, happiness and surprise.
+	-N (for negative): anger, fear and sorrow.
+
+3.- With "extractDimentions.sh" extract the 2 dimentions from the EmoLib
+results file.
+
+4.- With "joiner.sh" join the EmoLib dimentions with the Russell's sentiment
+categories and remove the EOLs with Vim (:1,$ s/\ \n/\ /g).
+
+5.- With "balanceSentimentDataset.sh" a new dataset is produced in order to be
+used for a k-Fold Cross Validation process.
+
+6.- The 10-fold xvalidation is processed to quantify the performance of the
+desired classifier.
+
+Since the vast amount of resulting points prevent the simple perceptron from
+training a reliable linear classifier, "../centroids.pl" is used to
+find the centroids for the two sentiment evaluations (N and P). Then the
+resulting two centroids are used to build a good classifier 
+(emolib.util.eval.builder.BuildSimplePerceptron class) and test it on the whole dataset
+(emolib.util.eval.tester.TestSimplePerceptron class).
+
+==================================================================================
+
+The translation provided by Apertium needs to be reviewed in line 1173. Otherwise the
+resulting file lacks one headline.
+
+==================================================================================
+
+Since the system still misses abbreviations and multiple punctuation symbols, 
+some input headlines have been modified:
+
+	Dance movie takes over No. 1.
+	A Mistrial for Lieut. Watada.
+	Internet attacked! (Did anyone notice?).
+	Travel+Leisure: Next island hot spot: St. Lucia.
+	Next island hot spot: St. Lucia.
+
+--
+Bibliography:
+
+[Garcia and Alias, 2008] Garcia, D. and Alias, F., "Emotion identification from 
+text using semantic disambiguation", Procesamiento del Lenguaje Natural, n. 40, 
+(ISSN: 1135-5948), pp. 67-74. (in Spanish)
+
+[Genereux and Evans, 2006] Genereux, M. and Evans R.,
+"Towards a validated model for affective classification of texts",
+Sentiment and Subjectivity in Text, Workshop at the Annual Meeting of the Association 
+of Computational Linguistics (ACL 2006), Sydney, Australia, July 22, 2006.

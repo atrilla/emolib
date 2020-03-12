@@ -1,0 +1,1921 @@
+2-Jul-2012  Alexandre Trilla  <atrilla@salle.url.edu>
+
+    * src/emolib/classifier/machinelearning/TASS2Levels.java (getCategory, 
+        trainingProcedure): L1:No-NONE vs. NONE, L2: C-NONE
+
+
+1-Jul-2012  Alexandre Trilla  <atrilla@salle.url.edu>
+
+    * src/emolib/classifier/machinelearning/TASS2Levels.java: creation.
+
+
+20-Mar-2012  Alexandre Trilla  <atrilla@salle.url.edu>
+
+    * src/emolib/classifier/eval/KFoldXValidation.java (main): close
+    dataset file stream.
+
+
+24-Feb-2012  Alexandre Trilla  <atrilla@salle.url.edu>
+
+    * src/emolib/wordassoc/wordassocnet/WordAssocNet.java: creation.
+
+
+9-Dec-2011  Alexandre Trilla  <atrilla@salle.url.edu>
+
+    *  src/emolib/classifier/machinelearning/MultinomialNB.java (class
+    definition, constructor, createWeightedVector, setMI, setChi2,
+    setTF): addition of term sel methods.
+    *  src/emolib/classifier/machinelearning/Logistic.java: idem
+    *  src/emolib/classifier/machinelearning/WekaMultinomialNB.java: idem
+    *  src/emolib/classifier/eval/KFoldXValidation.java
+
+
+24-Nov-2011  Alexandre Trilla  <atrilla@salle.url.edu>
+
+    * src/emolib/classifier/machinelearning/MultinomialLogReg.java: deleted.
+    * src/emolib/classifier/eval/KFoldXValidation.java
+
+
+17-Nov-2011  Alexandre Trilla  <atrilla@salle.url.edu>
+
+    * src/emolib/util/servlet: reorganisation into "en" and "es".
+
+
+16-Nov-2011  Alexandre Trilla  <atrilla@salle.url.edu>
+
+    * src/emolib/classifier/supervised: divided into "heuristic" and 
+    "machinelearning".
+    * src/emolib/classifier/machinelearning/Bernoulli.java: deleted.
+    * src/emolib/classifier/machinelearning/Experimental.java: deleted.
+    * src/emolib/classifier/machinelearning/SVM.java: deleted.
+    * src/emolib/classifier/eval/KFoldXValidation.java
+    * src/emolib/util/eval/semeval/SemevalCorpusCategorizerNN.java
+    * src/emolib/util/eval/CorpusVocabularyStatistics.java
+
+
+7-Oct-2011  Alexandre Trilla  <atrilla@salle.url.edu>
+
+    * src/emolib/classifier/eval/KFoldXValidation.java (main): MNB
+    params.
+
+
+27-Sep-2011  Alexandre Trilla  <atrilla@salle.url.edu>
+
+    * src/emolib/classifier/supervised/SupportVectorMachine.java (setMI,
+    setChi2, setTF, class flags): addition of featsel.
+    * src/emolib/classifier/eval/KFoldXValidation.java
+
+    * src/emolib/classifier/supervised/ARNReduced.java (class flag, 
+    setFeatSelTF, trainingProcedure): tf featsel method.
+
+
+24-Sep-2011  Alexandre Trilla  <atrilla@salle.url.edu>
+
+    * src/emolib/classifier/supervised/LSA.java (class vars, getters
+    and setters, createWeightedVector, trainingProcedure): addition
+    of flags.
+    * src/emolib/classifier/eval/KFoldXValidation.java
+
+
+22-Sep-2011  Alexandre Trilla  <atrilla@salle.url.edu>
+
+    * src/emolib/wsd/simlib/SimLibWSD.java (applyWSD): bug in the consideration of
+    affective words in the analysis (the chain of flags).
+
+    * src/emolib/classifier/supervised/WekaMultinomialNB.java (getters/setters):
+    parameters.
+
+
+16-Sep-2011  Alexandre Trilla  <atrilla@salle.url.edu>
+
+    * src/emolib/util/eval/CorpusVocabularyStatistics.java (main): bigram
+    vocabulary for frequenct bigrams.
+
+    * src/emolib/util/eval/semeval/termfreqs.py: average sentence length.
+
+
+14-Sep-2011  Alexandre Trilla  <atrilla@salle.url.edu>
+
+    * src/emolib/util/eval/semeval/termfreqs.py: creation.
+
+
+12-Sep-2011  Alexandre Trilla  <atrilla@salle.url.edu>
+
+    * src/emolib/wsd/simlib/IndexBroker.java (class, parametric constr,
+    getInstance): dynamic behaviour.
+    * src/emolib/wsd/simlib/SimilarityAssessor.java
+
+
+12-Sep-2011  Isaac Lozano  <st18187@salle.url.edu>
+
+    * src/emolib/wsd/simlib/SimLibWSD.java (class, register, newProperties,
+    constructor, applyWSD): semantic granularity at noun-verb-adj level.
+
+
+17-Aug-2011  Alexandre Trilla  <atrilla@salle.url.edu>
+
+    * src/emolib/classifier/supervised/ARNReduced.java (trainingProcedure,
+    globalFeatSel): condition to enter feat sel and Chi2 method.
+
+    * src/emolib/classifier/supervised/WekaMultinomialNB.java (setChi2):
+    Chi2 term sel method.
+
+    * src/emolib/classifier/eval/KFoldXValidation.java (main): refactor MI.
+    Chi2 in WMNB.
+
+
+15-Aug-2011  Alexandre Trilla  <atrilla@salle.url.edu>
+
+    * src/emolib/classifier/supervised/ARNReduced.java (Graph-pruneUtility,
+    Graph-utilitySort, Graph-removeElement, GraphElement-get/setUtilityMeasure,
+    globalFeatSel, setFeatSelMI, trainingProcedure): Mutual Information feature 
+    selection.
+    * src/emolib/classifier/supervised/WekaMultinomialNB.java (setMI)
+    * src/emolib/classifier/eval/KFoldXValidation.java
+
+
+11-Aug-2011  Alexandre Trilla  <atrilla@salle.url.edu>
+
+    * src/emolib/classifier/supervised/WekaMultinomialNB.java: creation.
+    * src/emolib/classifier/eval/KFoldXValidation.java
+
+
+31-Jul-2011  Alexandre Trilla  <atrilla@salle.url.edu>
+
+    * src/emolib/classifier/supervised/SVM.java: creation. Does not
+    work.
+    * src/emolib/classifier/eval/KFoldXValidation.java
+
+
+25-Jul-2011  Alexandre Trilla  <atrilla@salle.url.edu>
+
+    * src/emolib/classifier/supervised/MultinomialNB.java: creatyion based on
+    Manning et. al., 2008.
+    * src/emolib/classifier/eval/KFoldXValidation.java
+
+    * src/emolib/classifier/supervised/BernoulliNB.java (getCategory):
+    test graph building.
+
+
+24-Jul-2011  Alexandre Trilla  <atrilla@salle.url.edu>
+
+    * src/emolib/classifier/supervised/BernoulliNB.java: creation.
+    * src/emolib/classifier/supervised/ARNReduced.java (containsElement,
+    getElementTermFrequency, getVocabularyGraph)
+    * src/emolib/classifier/eval/KFoldXValidation.java
+
+
+18-Jul-2011  Alexandre Trilla  <atrilla@salle.url.edu>
+
+    * src/emolib/util/servlet/ProcessingService.java (demoLimitsExceeded):
+    ACL.
+
+
+16-Jul-2011  Alexandre Trilla  <atrilla@salle.url.edu>
+
+    * src/emolib/util/servlet/ProcessingService.java (service): try-
+    catch OutOfMemoryError + colon splitting.
+
+
+14-Jul-2011  Alexandre Trilla  <atrilla@salle.url.edu>
+
+    * src/emolib/util/servlet/formval.js (validateForm): remove
+    forbidden characters.
+
+
+13-Jul-2011  Alexandre Trilla  <atrilla@salle.url.edu>
+
+    * src/emolib/util/servlet/ProcessingService.java (service): free
+    memory check to prevent heap space problems.
+
+
+2-Jul-2011  Alexandre Trilla  <atrilla@salle.url.edu>
+
+    * src/emolib/util/servlet/ProcessingService.java (demoLimitsExceeded):
+    subnetting is allowed to privileged users.
+
+
+27-Jun-2011  Alexandre Trilla  <atrilla@salle.url.edu>
+
+    * src/emolib/pos/qtag/SpanishQTag.java (applyPOSTagging): NP added to
+    the noun identification.
+
+
+23-Jun-2011  Alexandre Trilla  <atrilla@salle.url.edu>
+
+    * src/emolib/wsd/simlib/SimLibWSD.java (applyWSD): lower cases.
+
+
+19-Jun-2011  Alexandre Trilla  <atrilla@salle.url.edu>
+
+    * src/emolib/classifier/supervised/ARNReduced.java: Functionality
+    test.
+    * build.xml: JUnit Ant task.
+
+    * src/emolib/classifier/supervised/SupportVectorMachine.java:
+    Functionality test.
+    * build.xml: JUnit Ant task.
+
+    * src/emolib/classifier/supervised/MultinomialLogReg.java: 
+    Functionality test.
+    * build.xml: JUnit Ant task.
+
+    * src/emolib/classifier/supervised/LSA.java: Functionality test.
+    * build.xml: JUnit Ant task.
+
+
+16-Jun-2011  Alexandre Trilla  <atrilla@salle.url.edu>
+
+    * src/emolib/util/eval/semeval/valence.py: creation
+
+    * src/emolib/classifier/supervised/MultinomialLogReg.java: former
+    LogReg.
+    * src/emolib/classifier/eval/KFoldXValidation.java
+
+    * src/emolib/classifier/supervised/OrdinalLogReg.java: former
+    OrdinalMLR.
+    * src/emolib/classifier/eval/KFoldXValidation.java
+
+
+15-Jun-2011  Alexandre Trilla  <atrilla@salle.url.edu>
+
+    * src/emolib/classifier/supervised/OrdinalMLR.java: creation.
+    * src/emolib/classifier/eval/KFoldXValidation.java
+
+
+3-Jun-2011  Alexandre Trilla  <atrilla@salle.url.edu>
+
+    * src/emolib/classifier/supervised/RiskLogReg.java: creation.
+    Not working. Improper cost function?
+    * src/emolib/classifier/eval/KFoldXValidation.java
+
+
+27-May-2011  Alexandre Trilla  <atrilla@salle.url.edu>
+
+    * src/emolib/classifier/supervised/ExponentialRegression.java:
+    deleted.
+
+    * src/emolib/classifier/supervised/Rayleigh.java: deleted.
+
+    * src/emolib/classifier/supervised/Exponential.java (estimation): it
+    works!
+
+
+26-May-2011  Alexandre Trilla  <atrilla@salle.url.edu>
+
+    * src/emolib/classifier/supervised/Bernoulli.java: creation.
+    It works!
+    * src/emolib/classifier/eval/KFoldXValidation.java
+
+
+24-May-2011  Alexandre Trilla  <atrilla@salle.url.edu>
+
+    * src/emolib/classifier/supervised/Exponential.java 
+    (estimateExponential, calcExp): k-1 parameter fixed to infty.
+
+    * src/emolib/classifier/supervised/LogReg.java: creation.
+    * src/emolib/classifier/eval/KFoldXValidation.java
+
+    * src/emolib/classifier/supervised/Rayleigh.java: creation,
+    but it works awfully.
+    * src/emolib/classifier/eval/KFoldXValidation.java
+
+
+23-May-2011  Alexandre Trilla  <atrilla@salle.url.edu>
+
+    * src/emolib/classifier/supervised/Exponential.java: creation.
+
+
+20-May-2011  Alexandre Trilla  <atrilla@salle.url.edu>
+
+    * src/emolib/classifier/supervised/ExponentialRegression.java:
+    creation. Doesn't work yet. Regularisation?
+
+
+17-May-2011  Alexandre Trilla  <atrilla@salle.url.edu>
+
+    * src/emolib/classifier/eval/KFoldXValidation.java (evaluate):
+    yield F_1 while fold-iterating.
+
+
+16-May-2011  Alexandre Trilla  <atrilla@salle.url.edu>
+
+    * src/emolib/eks/anlw/EmotionalKeywordSpotterANLW.java (applyEKS): adverbs are
+    assimilated to adjectives.
+
+    * src/emolib/classifier/supervised/Logistic.java (VectorStatistics): mean
+    subtraction instead of standardisation.
+
+
+11-May-2011  Alexandre Trilla  <atrilla@salle.url.edu>
+
+    * src/emolib/classifier/eval/KFoldXValidation.java (getFeatures, main):
+    adverbs.
+
+
+10-May-2011  Alexandre Trilla  <atrilla@salle.url.edu>
+
+    * src/emolib/pos/stanford/EnglishStanford.java (correspondsToAdverb):
+    account for adverbs.
+    * src/emolib/tokenizer/lexer/english/EnglishLexer.jj (parseEnglishGrammar)
+    * src/emolib/util/proc/WordData.java (setAsAdverb, isAdverb)
+    * src/emolib/wsd/simlib/SimLibWSD.java (applyWSD)
+    * src/emolib/eks/anlw/EmotionalKeywordSpotterANLW.java (applyEKS)
+
+
+04-May-2011  Alexandre Trilla  <atrilla@salle.url.edu>
+
+    * src/emolib/wsd/simlib/IndexBroker.java (constructors):
+    adaptation to Lucene v2.9.
+
+
+28-Apr-2011  Alexandre Trilla  <atrilla@salle.url.edu>
+
+    * src/emolib/wsd/simlib/SimLibWSD.java (applyWSD): synonym expansion with
+    nouns, adjectives and verbs.
+
+
+15-Apr-2011  Alexandre Trilla  <atrilla@salle.url.edu>
+
+    * src/emolib/util/servlet/formval.js: more special chars allowed.
+    * src/emolib/tokenizer/Tokenizer.java (inputData)
+    * src/emolib/formatter/xml/XMLFormatter.java (outputData)
+
+
+11-Apr-2011  Alexandre Trilla  <atrilla@salle.url.edu>
+
+    * src/emolib/classifier/supervised/ARNReduced.java (calcTFOthersRankSum):
+    power weight difference.
+
+
+06-Apr-2011  Alexandre Trilla  <atrilla@salle.url.edu>
+
+    * src/emolib/classifier/supervised/ARNReduced.java (applyTermWeighing,
+    calcTFOthersRankSum): CRRF TW measure.
+    * src/emolib/classifier/eval/KFoldXValidation.java
+
+
+05-Mar-2011  Alexandre Trilla  <atrilla@salle.url.edu>
+
+    * src/emolib/classifier/supervised/ARNReduced.java (trainingProcedure,
+    Graph.dumpContent): fixed training with freqs of graph elements.
+
+
+04-Mar-2011  Alexandre Trilla  <atrilla@salle.url.edu>
+
+    * src/emolib/util/eval/CorpusVocabularyStatistics (main): check ranges for small
+    datasets and adequacy to the new ARNReduced format.
+
+
+03-Mar-2011  Alexandre Trilla  <atrilla@salle.url.edu>
+
+    * src/emolib/classifier/supervised/SupportVectorMachine.java (setIntercept):
+    intercept feature setter.
+    * src/emolib/classifier/supervised/Logistic.java (setIntercept)
+    * src/emolib/classifier/eval/KFoldXValidation.java
+
+
+22-Feb-2011  Alexandre Trilla  <atrilla@salle.url.edu>
+
+    * src/emolib/classifier/supervised/SupportVectorMachine.java (trainingProcedure,
+    setLowerOrderTerms, setNormalisedPolyK): addition of normalised quadratic kernels.
+    * src/emolib/classifier/eval/KFoldXValidation.java
+
+    * src/emolib/classifier/supervised/ARNReduced.java (computeSimilarity): dot prod.
+    * src/emolib/classifier/eval/KFoldXValidation.java
+
+
+21-Feb-2011  Alexandre Trilla  <atrilla@salle.url.edu>
+
+    * src/emolib/classifier/supervised/SupportVectorMachine.java (trainingProcedure,
+    setRBF, setExponent): addition of quadratic and RBF kernels.
+    * src/emolib/classifier/eval/KFoldXValidation.java
+
+
+18-Feb-2011  Alexandre Trilla  <atrilla@salle.url.edu>
+
+    * src/emolib/classifier/eval/KFoldXValidation.java (main): elapsed days.
+
+    * src/emolib/classifier/supervised/Logistic.java (VectorStatistics): z-scores.
+
+
+17-Feb-2011  Alexandre Trilla  <atrilla@salle.url.edu>
+
+    * src/emolib/classifier/supervised/Logistic.java (getVariances): dimension-wise
+    variance estimation. No bootstrapping yet.
+    * src/emolib/classifier/eval/KFoldXValidation.java
+
+
+10-Feb-2011  Alexandre Trilla  <atrilla@salle.url.edu>
+
+    * src/emolib/classifier/eval/KFoldXValidation.java (evaluate): elapsed days.
+
+
+09-Feb-2011  Alexandre Trilla  <atrilla@salle.url.edu>
+
+    * src/emolib/classifier/supervised/SupportVectorMachine.java (createWeightedVector):
+    in training and testing.
+    * src/emolib/classifier/eval/KFoldXValidation.java
+
+
+08-Feb-2011  Alexandre Trilla  <atrilla@salle.url.edu>
+
+    * src/emolib/classifier/supervised/SupportVectorMachine.java: addition of TW.
+
+
+07-Feb-2011  Alexandre Trilla  <atrilla@salle.url.edu>
+
+    * src/emolib/wsd/simlib/SimLibWSD.java (applyWSD): further restriction on the
+    other word data objects (emotional content + noun POS tag).
+
+
+27-Jan-2011  Alexandre Trilla  <atrilla@salle.url.edu>
+
+    * src/emolib/classifier/supervised/Logistic.java (createWeightedVector):
+    all parameters bundled here.
+    * src/emolib/classifier/eval/KFoldXValidation.java
+
+
+26-Jan-2011  Alexandre Trilla  <atrilla@salle.url.edu>
+
+    * src/emolib/classifier/supervised/Logistic.java: memeber vars and
+    setters for considering POS tags, stems, synonyms and tfrf TW.
+    * src/emolib/classifier/eval/KFoldXValidation.java
+
+
+25-Jan-2011  Alexandre Trilla  <atrilla@salle.url.edu>
+
+    * src/emolib/classifier/supervised/ARNReduced.java (applyTermWeighing):
+    addition of ltf and itf_leopold.
+
+
+05-Jan-2011  Alexandre Trilla  <atrilla@salle.url.edu>
+
+    * src/emolib/classifier/supervised/ARNReduced.java (getFeatures):
+    consideration of stemmed words.
+    * src/emolib/classifier/eval/KFoldXValidation.java (main)
+
+    * src/emolib/classifier/eval/KFoldXValidation.java (evaluate):
+    performance refactorisation to extract features from the
+    pipeline only once.
+
+
+04-Jan-2011  Alexandre Trilla  <atrilla@salle.url.edu>
+
+    * src/emolib/tokenizer/lexer/english/EnglishLexer.jj: token
+    redefinition so that no more than one word is allowed per token.
+
+    * src/emolib/classifier/FeatureBox.java (containsSynonyms):
+    synonym content check.
+
+    * src/emolib/classifier/supervised/ARNReduced.java: consideration
+    of synonyms as BOW features.
+    * src/emolib/classifier/eval/KFoldXValidation.java (main)
+
+    * src/emolib/classifier/eval/KFoldXValidation.java (getFeatures):
+    POS tags and classes of word.
+
+
+03-Jan-2011  Alexandre Trilla  <atrilla@salle.url.edu>
+
+    * src/emolib/classifier/eval/KFoldXValidation.java: creation.
+    Replacing src/emolib/util/eval/KFoldXValidation.java, it
+    uses EmoLib's processing pipeline to extract linguistic
+    features from text.
+    * src/emolib/AffectiveTagger.java (inputData, processText)
+    * src/emolib/stemmer/snowball/GenericSnowballStemmer.java (applyStemming)
+
+    * src/emolib/classifier/FeatureBox.java (getters and setters):
+    consideration of features from the processing pipeline: words,
+    POS tags, synonyms, stems, stemmed synonyms and negations.
+
+    * src/emolib/classifier/supervised/ARNReduced.java (class,
+    constructor, buildGraph, setPOS): consideration of POS tags
+    along with the words.
+
+
+10-Dec-2010  Alexandre Trilla  <atrilla@salle.url.edu>
+
+    * src/emolib/classifier/supervised/ARNReduced.java (getCategoryList):
+    avoids the disorder in the hash map iterator.
+    * src/emolib/classifier/supervised/Logistic.java
+    * src/emolib/classifier/supervised/LSA.java
+    * src/emolib/classifier/supervised/SupportVectorMachine.java
+
+
+08-Dec-2010  Alexandre Trilla  <atrilla@salle.url.edu>
+
+    * src/emolib/util/eval/KFoldXValidation.java (main): SVM + TF.
+
+
+06-Dec-2010  Alexandre Trilla  <atrilla@salle.url.edu>
+
+    * src/emolib/classifier/supervised/SupportVectorMachine.java:
+    creation.
+    * src/emolib/util/eval/KFoldXValidation.java (main): SVM inclusion.
+
+
+03-Dec-2010  Alexandre Trilla  <atrilla@salle.url.edu>
+
+    * src/emolib/classifier/supervised/LSA.java (addTermVector): check
+    first if term is in the Terms list.
+    * src/emolib/util/eval/KFoldXValidation.java (main): LSA inclusion.
+
+
+02-Dec-2010  Alexandre Trilla  <atrilla@salle.url.edu>
+
+    * src/emolib/classifier/supervised/LSA.java (trainingProcedure,
+    getCategory, and similarities): baseline ok computing the
+    similarity with all the category-specific terms.
+    * src/emolib/classifier/supervised/ARNReduced.java (getArrayOfTerms,
+    getCategoryGraphs)
+
+
+01-Dec-2010  Alexandre Trilla  <atrilla@salle.url.edu>
+
+    * src/emolib/classifier/supervised/Logistic.java: ARN term weighting
+    calls (no use of applyModelTermWeighing).
+    * src/emolib/classifier/supervised/ARNReduced.java (applyTermWeighing):
+    public access.
+
+    * src/emolib/classifier/supervised/LSA.java: new. Training stage.
+    * src/emolib/classifier/FeatureBox.java (constructor w text)
+
+
+30-Nov-2010  Alexandre Trilla  <atrilla@salle.url.edu>
+
+    * src/emolib/util/eval/KFoldXValidation.java (evaluate,
+    calcStandardDeviation): deals with NaNs.
+
+    * src/emolib/classifier/supervised/Logistic.java (trainingProcedure,
+    getCategory): default intercept feature.
+
+
+22-Nov-2010  Alexandre Trilla  <atrilla@salle.url.edu>
+
+    * src/emolib/util/eval/CorpusVocabularyStatistics.java (main): bigrams.
+    * src/emolib/classifier/supervised/ARNReduced.java (getBigramVocabularySize)
+
+
+17-Nov-2010  Alexandre Trilla  <atrilla@salle.url.edu>
+
+    * src/emolib/classifier/supervised/ARNReduced.java (getCategory):
+    ITF as an unsupervised TW method.
+
+
+16-Nov-2010  Alexandre Trilla  <atrilla@salle.url.edu>
+
+    * src/emolib/classifier/supervised/Logistic.java (trainingProcedure,
+    getCategory, setTermWeighingMethod, setCOF): successful results +
+    TW options.
+    * src/emolib/classifier/supervised/ARNReduced.java (getCategoryHash):
+    HashMap return + tf=zero chech in the applyTW method.
+    * src/emolib/util/eval/KFoldXValidation.java (main)
+
+
+08-Nov-2010  Alexandre Trilla  <atrilla@salle.url.edu>
+
+    * src/emolib/classifier/supervised/Logistic.java (trainingProcedure):
+    beginning to train the auxiliary ARN-R.
+
+
+06-Nov-2010  Alexandre Trilla  <atrilla@salle.url.edu>
+
+    * src/emolib/classifier/supervised/Logistic.java: skeleton.
+
+
+27-Oct-2010  Alexandre Trilla  <atrilla@salle.url.edu>
+
+    * src/emolib/util/IndentationFormatter.java (correctIndentation):
+    long line indent ok.
+    * All source files.
+    * build.xml: javadoc classpath.
+
+
+23-Oct-2010  Alexandre Trilla  <atrilla@salle.url.edu>
+
+    * src/emolib/util/servlet/ProcessingService.java (demoLimitsExceeded):
+    index out of array bounds + privileged user log.
+
+    * src/emolib/util/servlet/formval.js: few allowed punctuation marks.
+
+
+22-Oct-2010  Alexandre Trilla  <atrilla@salle.url.edu>
+
+    * src/emolib/eks/anlw/DictionaryANLW.java (constructor): closing
+    of the dictionary reference.
+
+    * src/emolib/AffectiveTagger.java (getEmoLibPath): creation.
+    * src/emolib/util/servlet/ProcessingService.java (demoLimitsExceeded):
+    does not work yet.
+
+
+21-Oct-2010  Alexandre Trilla  <atrilla@salle.url.edu>
+    * src/emolib/util/servlet/formval.js: trim function.
+
+    * src/emolib/util/servlet/default.css: yellowbox style.
+
+    * src/emolib/util/servlet/ProcessingService.java (service): including
+    access privileges.
+
+
+19-Oct-2010  Alexandre Trilla  <atrilla@salle.url.edu>
+
+    * src/emolib/util/IndentationFormatter.java: ok.
+
+
+18-Oct-2010  Alexandre Trilla  <atrilla@salle.url.edu>
+
+    * src/emolib/classifier/supervised/NaiveBayes.java: style.
+
+    * src/emolib/util/eval/ExampleTextFile.java (main): close infile.
+
+    * src/emolib/util/IndentationFormatter.java.tmp: creation. Experimental
+    class to standarise indentation spaces.
+
+
+14-Oct-2010  Alexandre Trilla  <atrilla@salle.url.edu>
+
+    * src/emolib/classifier/supervised/{KNearestNeighbor,NaiveBayes,
+    NearestCentroid}.java: 270 style errors.
+
+
+13-Oct-2010  Alexandre Trilla  <atrilla@salle.url.edu>
+
+    * src/emolib/classifier/supervised/FiveIntervalsKE.java: 315 style errors.
+    * src/emolib/classifier/supervised/NearestCentroid.java
+    * src/emolib/classifier/supervised/HierarchicalARNReduced.java
+    * src/emolib/classifier/supervised/ARNReduced.java
+
+
+12-Oct-2010  Alexandre Trilla  <atrilla@salle.url.edu>
+    * build.xml: code style. 419 errors with the new code_checks.xml.
+    * src/emolib/AffectiveTagger.java
+    * src/emolib/classifier/Classifier.java
+    * src/emolib/classifier/supervised/ARNReduced.java
+
+
+10-Oct-2010  Alexandre Trilla  <atrilla@salle.url.edu>
+    * build.xml, src/**/*.java: code style. 4480 errors.
+
+
+08-Oct-2010  Alexandre Trilla  <atrilla@salle.url.edu>
+    * src/emolib/formatter/xml/XMLFormatter.java (outputData): XML file
+    creation now deals with with the new config file (no system dependent
+    file separators).
+    * Massive test replace: conf/emolib -> CONFIG_FILE, dist/EmoLib -> 
+    EmoLib.
+    * build.xml: better format. Checkstyle addition, not compiling yet
+    with its consideration.
+    * all sources: spaces instead to tab indentation.
+
+
+07-Oct-2010  Alexandre Trilla  <atrilla@salle.url.edu>
+    * src/emolib/util/massiveTextReplace.sh: new script.
+
+
+30-Sep-2010  Alexandre Trilla  <atrilla@salle.url.edu>
+    * src/emolib/classifier/supervised/ARNReduced.java (computeSimilarity):
+    adding the matrix cosine distance with the Frobenius inner product.
+    * src/emolib/util/eval/KFoldXValidation.java (main)
+
+
+28-Sep-2010  Alexandre Trilla  <atrilla@salle.url.edu>
+    * src/emolib/util/eval/KFoldXValidation.java (evaluate): getCategory
+    out of the loop. Speed increase. Improved interface for ARN-based
+    classifiers.
+
+
+26-Sep-2010  Alexandre Trilla  <atrilla@salle.url.edu>
+    * src/emolib/classifier/supervised/ARNReduced.java (computeSimilarity):
+    fixed similarity criterion (inverse of the matrix difference).
+
+
+24-Sep-2010  Alexandre Trilla  <atrilla@salle.url.edu>
+    * src/emolib/classifier/supervised/ARNReduced.java (computeSimilarity,
+    getListOfNodes, exportWeightedMatrix): adding the matrixdifnorm2
+    network-based similarity measure.
+    * src/emolib/util/eval/KFoldXValidation.java (main, printSynopsis)
+
+
+27-Jun-2010  Alexandre Trilla  <atrilla@salle.url.edu>
+    * src/emolib/util/eval/KFoldXValidation.java (main, printSynopsis):
+    all ARNR with RITF removed. RITF and ITF behave indistinctly.
+    Addition of a fixed dataset to be considered during training.
+
+
+21-Jun-2010  Alexandre Trilla  <atrilla@salle.url.edu>
+
+    * src/emolib/classifier/supervised/ARNReduced.java: refactored.
+
+
+20-Jun-2010  Alexandre Trilla  <atrilla@salle.url.edu>
+
+    * src/emolib/classifier/supervised/ARNReduced.java: some improvements.
+    Less debugging stuff. ITF needs review.
+
+
+12-Jun-2010  Alexandre Trilla  <atrilla@salle.url.edu>
+
+    * src/emolib/classifier/supervised/ARNReduced.java (getSimilarity): back
+    to plain cosine similarity. Addition of applyModelTermWeighing.
+    And getTFAllModel. This class is full of debugging stuff that needs
+    to be removed.
+
+
+10-Jun-2010  Alexandre Trilla  <atrilla@salle.url.edu>
+
+    * src/emolib/classifier/supervised/ARNReduced.java (getSimilarity): the
+    similarity is defined to be positive, for compatibility with Textclass.
+
+
+13-May-2010  Alexandre Trilla  <atrilla@salle.url.edu>
+
+    * src/emolib/classifier/supervised/ARNReduced.java (getCorpusSize,
+    getVocabularySize, getOrderedList, getOrderedTupleList,
+    getCorpusTupleSize): addition of tuple managemet for statistics.
+    * src/emolib/util/eval/CorpusVocabularyStatistics.java (main):
+    ARN with COF.
+
+
+06-May-2010  Alexandre Trilla  <atrilla@salle.url.edu>
+
+    * src/emolib/classifier/supervised/HierarchicalARNReduced.java 
+    (buildNetworks, constructor, reset): code reuse and correction.
+
+
+05-May-2010  Alexandre Trilla  <atrilla@salle.url.edu>
+
+    * src/emolib/util/eval/CorpusVocabularyStatistics.java (main): calculation 
+    of corpus perplexity.
+
+
+19-Apr-2010  Alexandre Trilla  <atrilla@salle.url.edu>
+
+    * src/emolib/classifier/supervised/HierarchicalARNReduced.java (constructor): 
+    inclusion of RF.
+    * src/emolib/util/eval/KFoldXValidation.java
+
+
+15-Apr-2010  Alexandre Trilla  <atrilla@salle.url.edu>
+
+    * src/emolib/classifier/supervised/ThreeIntervalsKE.java: creation.
+    * src/emolib/util/eval/KFoldXValidation.java (main): inclusion.
+
+
+29-Mar-2010  Alexandre Trilla  <atrilla@salle.url.edu>
+
+    * src/emolib/classifier/supervised/ARNReduced.java (getOrderedList): 
+    function to return an ordered list of graph elements.
+    * src/emolib/util/eval/CorpusVocabularyStatistics.java (main): includion
+    of the functionality above.
+
+
+01-Mar-2010  Alexandre Trilla  <atrilla@salle.url.edu>
+
+    * src/emolib/util/eval/include_tuples.pl: creation.
+
+
+26-Feb-2010  Alexandre Trilla  <atrilla@salle.url.edu>
+
+    * src/emolib/classifier/supervised/HierarchicalARNReduced.java (main):
+    addition of variants of SHCA ARN-R.
+    * src/emolib/util/eval/KFoldXValidation.java (main): inclusion.
+
+    * src/emolib/util/eval/fwf/SentencePrinter.java: creation. Class to
+    pre-process the FWF corpus.
+
+
+20-Feb-2010  Alexandre Trilla  <atrilla@salle.url.edu>
+
+    * src/emolib/classifier/supervised/NaiveBayes.java
+    (getPosteriorProbability): actual computation of a probability.
+
+    * src/emolib/classifier/supervised/RiskWeightedNaiveBayes.java
+    (trainingProcedure): exit if no procedure found.
+
+    * src/emolib/classifier/supervised/NearestCentroid.java (javadoc):
+    inclusion of Interspeech article.
+
+    * src/emolib/classifier/supervised/HierarchicalARNReduced.java: creation.
+    * src/emolib/util/eval/KFoldXValidation.java (main): inclusion.
+
+    * src/emolib/classifier/supervised/ARNReduced.java (getCorpusSize,
+    getVocabularySize): functions to help obtain text statistics for n-grams.
+
+    * src/emolib/util/eval/CorpusVocabularyStatistics.java: creation.
+
+
+12-Feb-2010  Alexandre Trilla  <atrilla@salle.url.edu>
+
+    *  src/emolib/classifier/supervised/NaiveBayes.java (trainingProcedure):
+    std correction, division by (N - 1).
+    *  src/emolib/util/eval/KFoldXValidation.java (calcStandardDeviation):
+    std correction, division by (N - 1).
+
+
+11-Feb-2010  Alexandre Trilla  <atrilla@salle.url.edu>
+
+    * src/emolib/util/eval/KFoldXValidation (main): NB with priors addition.
+
+
+10-Feb-2010  Alexandre Trilla  <atrilla@salle.url.edu>
+
+    * src/emolib/classifier/supervised/ARNReduced.java (main): addition of
+    ARNR + ITF + COF.
+
+
+09-Feb-2010  Alexandre Trilla  <atrilla@salle.url.edu>
+
+    *  src/emolib/classifier/supervised/ARNReduced.java (getCategory,
+    applyTermWeighing): similarity update and more term weighting methods.
+    * src/emolib/util/eval/KFoldXValidation (main): additions.
+
+
+01-Feb-2010  Alexandre Trilla  <atrilla@salle.url.edu>
+
+    * src/emolib/util/eval/KFoldXValidation (evaluate): fixed mistake with the
+    examples taken from the folds.
+
+
+27-Jan-2010  Alexandre Trilla  <atrilla@salle.url.edu>
+
+    * src/emolib/classifier/supervised/ARNReduced.java (applyTermWeighing):
+    incorporation of a "wrong" ITF factor (like the old code). LTFRF wrong
+    again, like the old code.
+    * src/emolib/util/eval/KFoldXValidation (main): addition of ARN-R with
+    ITF as available classifier.
+
+
+08-Jan-2010  Alexandre Trilla  <atrilla@salle.url.edu>
+
+    * src/emolib/classifier/supervised/ARNReduced.java (calcTFOthersSum,
+    GraphElement.constructor, GraphElement.setWeighedMeasure,
+    GraphElement.getWeighedMeasure, applyTermWeighing, exportWeighedVector,
+    computeNorm, computeSimilarity, main): errors fixed. 
+    Incorporation of weighed metrics. Dummy main example.
+
+    * src/emolib/util/eval/KFoldXValidation (main): addition of ARN-R with
+    TF-RF as available classifiers.
+
+
+07-Jan-2010  Alexandre Trilla  <atrilla@salle.url.edu>
+
+    * src/emolib/classifier/supervised/ARNReduced.java (applyTermWeighing,
+    calcTFOthersSum): addition of the RF term weighing method.
+
+
+04-Jan-2010  Alexandre Trilla  <atrilla@salle.url.edu>
+
+    * src/emolib/util/eval/KFoldXValidation (constructor, evaluated, main):
+    assessment of only text features and inclusion of ARNwCOF.
+
+
+03-Jan-2010  Alexandre Trilla  <atrilla@salle.url.edu>
+
+    * src/emolib/classifier/supervised/ARNReduced.java (computeNorm,
+    getCategory, trainingProcedure): improvements.
+
+    * src/emolib/util/eval/KFoldXValidation (main, inputInstance): adequacy to
+    the textual domain, buit needs to be recoded.
+
+
+01-Jan-2010  Alexandre Trilla  <atrilla@salle.url.edu>
+
+    * src/emolib/classifier/supervised/ARNReduced.java
+    (Graph.getLinkTermFrequency, Graph.getNumberOfElements,
+    buildEmotionGraph, computeSimilarity, Graph.exportVectorTF, computeNorm): improvements.
+
+
+27-Dec-2009  Alexandre Trilla  <atrilla@salle.url.edu>
+
+    * src/emolib/classifier/supervised/ARNReduced.java (Graph constructor,
+    Graph.getCategoryName, Graph.setCategoryName, Graph.addNode,
+    Graph.addLink, newProperties, initialize, constructor, getSimilarity,
+    buildGraph, buildEmotionGraph, Graph.containsNode, Graph.containsLink,
+    Graph.getNodeTermFrequency): improvements to get the class ready.
+
+    * src/emolib/classifier/FeatureBox.java (constructor, setText, getText):
+    inclusion of plain text as emotional features.
+
+
+26-Dec-2009  Alexandre Trilla  <atrilla@salle.url.edu>
+
+    * src/emolib/classifier/supervised/ARNReduced.java: creation.
+
+
+04-Dec-2009  Alexandre Trilla  <atrilla@salle.url.edu>
+
+    * src/emolib/util/eval/CreateTextClassData.java: creation.
+
+    * src/emolib/statistic/average/ArithmeticMean.java (pivotValue): correct
+    pivoting function. Ranges from 1 to 9.
+
+
+24-Nov-2009  Alexandre Trilla  <atrilla@salle.url.edu>
+
+    * src/emolib/classifier/inductive/MaximumEntropy.java (calcProc,
+    calcFeature{V,A,C}, trainingProcedure): first code. Needs revision.
+
+
+23-Nov-2009  Alexandre Trilla  <atrilla@salle.url.edu>
+
+    * src/emolib/classifier/inductive/MaximumEntropy.java: creation.
+
+
+16-Oct-2009  Alexandre Trilla  <atrilla@salle.url.edu>
+
+    * src/emolib/util/eval/KFoldXValidation.java (main): addition of the RWNB
+    with the GD learning rule.
+
+
+08-Oct-2009  Alexandre Trilla  <atrilla@salle.url.edu>
+
+    * src/emolib/classifier/inductive/RiskWeightedNaiveBayes.java
+    (trainingProcedure): distance weighted loss values.
+    * src/emolib/classifier/inductive/NaiveBayes.java (getLikelihoodValences,
+    getLikelihoodActivations, getLikelihoodControls): retrieval functions for
+    integration purposes.
+    * src/emolib/classifier/inductive/density/Gaussian.java (getMean):
+    integration.
+
+
+07-Oct-2009  Alexandre Trilla  <atrilla@salle.url.edu>
+
+    * src/emolib/classifier/inductive/RiskWeightedNaiveBayes.java (register,
+    newProperties, constructor, setLearningProcedure, trainingProcedure):
+    beginning with the linear difference cost weights.
+    * src/emolib/classifier/inductive/NaiveBayes.java
+    (getTypeOfLikelihoodDensity): integration with the RiskWeightedNaiveBayes.
+
+
+06-Oct-2009  Alexandre Trilla  <atrilla@salle.url.edu>
+
+    * src/emolib/classifier/inductive/RiskWeightedNaiveBayes.java
+    (trainingProcedure): heuristic assignment of weights for trial. Works 0.5%
+    better.
+
+
+05-Oct-2009  Alexandre Trilla  <atrilla@salle.url.edu>
+
+    * src/emolib/classifier/inductive/RiskWeightedNaiveBayes.java (all):
+    converges but doen't work quite well.
+    * src/emolib/classifier/inductive/NaiveBayes.java (getEmotionCategories):
+    addition for integration with RiskWeightedNaiveBayes.
+    * src/emolib/util/eval/KFoldXValidation.java (main): addition of RWNB.
+
+
+04-Oct-2009  Alexandre Trilla  <atrilla@salle.url.edu>
+
+    * src/emolib/classifier/inductive/NaiveBayes.java (class definition,
+    newProperties, register, constructor, setAccountForPriors,
+    getPosteriorProbability, trainingProcedure, resetExamples): account for priors
+    and finish the classifier.
+    * src/emolib/util/eval/KFoldXValidation.java (main): incorporation of NB.
+
+    * src/emolib/classifier/inductive/RiskWeightedNaiveBayes.java: recoded
+    from scratch reusing the NaiveBayes class.
+
+
+03-Oct-2009  Alexandre Trilla  <atrilla@salle.url.edu>
+
+    * src/emolib/classifier/inductive/density/Gaussian.java (getProbability):
+    density is complete.
+
+    * src/emolib/classifier/inductive/NaiveBayes.java: creation.
+    Simplification of the RiskWeightedNaiveBayes.
+
+
+30-Oct-2009  Alexandre Trilla  <atrilla@salle.url.edu>
+
+    * src/emolib/classifier/inductive/density/ClassConditionalDensity.java:
+    creation. Interface for the densities.
+
+    * src/emolib/classifier/inductive/density/Gaussian.java: creation.
+    Univariate normal density.
+
+    * src/emolib/classifier/inductive/RiskWeightedNaiveBayes.java: creation.
+
+
+18-Oct-2009  Alexandre Trilla  <atrilla@salle.url.edu>
+
+    * src/emolib/util/eval/ExampleTextFile.java (main): lines with length zero
+    are not introduced into the system.
+
+    * src/emolib/util/servlet/ProcessingService.java (service,
+    containsLetters): dodges blank lines.
+
+    * src/emolib/statistic/average/ArithmeticMean.java (applyStatistics,
+    pivotValue): the pivoting around the threshold is proportional to the
+    bounds.
+
+
+16-Oct-2009  Alexandre Trilla  <atrilla@salle.url.edu>
+
+    * src/emolib/tokenizer/Tokenizer.java (class specification, register,
+    NewProperties, getData, fillConfigurationValues, inputData): addressing 
+    of the negation adverb modifier.
+    * src/emolib/tokenizer/lexer/spanish/SpanishLexer.jj
+    (parseSpanishGrammar)
+    * src/emolib/tokenizer/lexer/english/EnglishLexer.jj
+    (parseEnglishGrammar)
+    * src/emolib/util/proc/WordData.java (isNegationAdverb,
+    setAsNegationAdverb)
+
+    * src/emolib/statistic/average/ArithmeticMean.java (applyStatistics):
+    pivots corrected. Negation adverb pivoting added.
+
+    * src/emolib/util/servlet/formval.js: addition. Form validator.
+
+    * src/emolib/util/servlet/ProcessingService.java (service,
+    colourParagraphHeader, colourSentenceHeader): emotion dimensions displayed
+    in title HTML tag.
+
+
+10-Oct-2009  Alexandre Trilla  <atrilla@salle.url.edu>
+
+    * src/emolib/wsd/simlib/SimLibWSD.java (applyWSD): hasEmotionalContent
+    condition addition.
+
+
+09-Oct-2009  Alexandre Trilla  <atrilla@salle.url.edu>
+
+    * src/emolib/util/servlet/ProcessingService.java (service, eraseBreaks,
+    colourParagraphHeader): paragraph colouring + CRLF management.
+
+    * src/emolib/tokenizer/lexer/english/EnglishLexer.jj: CRLF skipping.
+    * src/emolib/tokenizer/lexer/english/SpanishLexer.jj
+
+
+08-Oct-2009  Alexandre Trilla  <atrilla@salle.url.edu>
+
+    * src/emolib/util/servlet/ProcessingService.java (service and headers and
+    footers): new WUI (web user interface).
+
+
+07-Oct-2009  Alexandre Trilla  <atrilla@salle.url.edu>
+
+    * src/emolib/util/proc/TextDataProcessor.java (flush): A method to flush
+    the pipeline aimed at the servlet service.
+    * src/emolib/formatter/xml/XMLFormatter.java
+    * src/emolib/AffectiveTagger.java
+    * src/emolib/statistic/average/ArithmeticMean.java
+    * src/emolib/util/servlet/ProcessingService.java
+
+    * src/emolib/util/servlet/ProcessingService.java (service, colourSentence,
+    colourParagraph): coloured texts.
+
+    * src/emolib/eks/anlw/EmotionalKeywordSpotterANLW.java (applyEKS): bug
+    correction. emotionsFound is set to false at the end of the bucle.
+
+
+06-Oct-2009  Alexandre Trilla  <atrilla@salle.url.edu>
+
+    * src/emolib/AffectiveTagger.java (outputData): new method to print the
+    results to a determined file, normally a temp one.
+    * src/emolib/formatter/xml/XMLFormatter.java
+    * src/emolib/formatter/AffectiveFormatter.java
+    * src/emolib/util/servlet/ProcessingService.java (doDownload): download
+    service.
+
+    * src/emolib/statistic/average/ArithmeticMean.java (applyStatistics):
+    contemplates the case that the document may contain one single
+    non-emotional paragraph. No NaN resulting dimension values.
+
+
+02-Oct-2009  Alexandre Trilla  <atrilla@salle.url.edu>
+
+    * src/emolib/util/servlet/ProcessingService.java: first working servlet,
+    but not integrated with EmoLib yet.
+
+
+22-Sep-2009  Alexandre Trilla  <atrilla@salle.url.edu>
+
+    * src/emolib/classifier/inductive/NearestCentroid.java (save, load): new XML
+    definition.
+
+    * src/emolib/classifier/Classifier.java (load): the loading method is a
+    void returning method.
+    * src/emolib/classifier/inductive/KNearestNeighbour.java
+    * src/emolib/classifier/inductive/FiveIntervalsKE.java
+    * src/emolib/classifier/inductive/NearestCentroid.java
+
+
+21-Sep-2009  Alexandre Trilla  <atrilla@salle.url.edu>
+
+    * src/emolib/classifier/inductive/NearestCentroid.java (save, main): method to
+    produce a trained NC classifier.
+
+
+18-Sep-2009  Alexandre Trilla  <atrilla@salle.url.edu>
+
+    * src/emolib/classifier/inductive/NearestCentroid.java (resetExamples):
+    the newly instantiated NN had to be specified the number of dimensions.
+
+    * src/emolib/stemmer/snowball/GenericSnowballStemmer.java (applyStemming):
+    lower case words before the stemming process. This bug led to incoherent
+    emotional predictions according to the case of words.
+
+
+02-Sep-2009  Alexandre Trilla  <atrilla@salle.url.edu>
+
+    * src/emolib/statistic/average/ArithmeticMean.java (class definition,
+    applyStatistics): addition of variables to compute the statistics
+    correctly. The paragraph dimensions are not cut (by half) if one of
+    the two sentences is neutral by default, such sentence is not computed.
+
+
+31-Aug-2009  Alexandre Trilla  <atrilla@salle.url.edu>
+
+    * src/emolib/formatter/xml/XMLFormatter.java (applyFormatting): count well
+    the number of paragraphs.
+
+    * src/emolib/splitter/bdt/SentenceSplitterBDT.java
+    (applySentenceSplitting): now deals with the data correctly.
+
+    * src/emolib/tokenizer/lexer/spanish/SpanishLexer.jj (definition): states
+    that there must be at least one dot to stop ('+' operator).
+    * src/emolib/tokenizer/lexer/english/EnglishLexer.jj
+
+
+01-Aug-2009  Alexandre Trilla  <atrilla@salle.url.edu>
+
+    * src/emolib/classifier/inductive/NearestCentroid.java: mods, but always
+    return N for sentiment classification.
+    * src/emolib/classifier/inductive/KNearestNeighbour.java
+
+    * src/emolib/util/eval/semeval/SemevalCorpusCategorizerNN.java: some
+    correction to make it work as it once did.
+
+
+29-Jul-2009  Alexandre Trilla  <atrilla@salle.url.edu>
+
+    * src/emolib/formatter/xml/XMLFormatter.java: previous MeanXMLFormatter.
+    Now adapted to the new data structure.
+    * src/emolib/formatter/AffectiveFormatter.java
+
+    * src/emolib/classifier/inductive/NearestCentroid.java: creation.
+    * src/emolib/util/eval/KFoldXValidation.java
+
+
+21-Jul-2009  Alexandre Trilla  <atrilla@salle.url.edu>
+
+    * src/emolib/classifier/inductive/KNearestNeighbour.java (getCategory):
+    error fixed, it did not clone the categories list.
+
+    * src/emolib/classifier/inductive/FiveIntervalsKE.java: new data
+    structure.
+    * src/emolib/util/eval/KFoldXValidation.java
+    * src/emolib/util/eval/semeval/SemevalCorpusCategorizerNN.java
+
+
+16-Jul-2009  Alexandre Trilla  <atrilla@salle.url.edu>
+
+    * src/emolib/classifier/inductive/KNearestNeighbour.java: adaptation to
+    the new data structure.
+
+
+10-Jul-2009  Alexandre Trilla  <atrilla@salle.url.edu>
+
+    * src/emolib/classifier/Classifier.java(applyClassification, save, load):
+    generic processing and save/load procedures.
+
+
+09-Jul-2009  Alexandre Trilla  <atrilla@salle.url.edu>
+
+    * src/emolib/classifier/Classifier.java: new specification. Now it should
+    be an abstract class with identification, the emotional dimensions content
+    and the language.
+
+    * src/emolib/classifier/FeatureBox.java: creation.
+
+
+08-Jul-2009  Alexandre Trilla  <atrilla@salle.url.edu>
+
+    * src/emolib/statistic/average/ArithmeticMean.java (applyStatistics):
+    complete integration with the new data struct.
+
+    * src/emolib/util/proc/ParagraphData.java (hasEmotionalContent): addition.
+    * src/emolib/util/proc/SentenceData.java (hasEmotionalContent)
+
+    * src/emolib/util/proc/TextData.java (all functions dealing with emotional
+    dimensions): addition of this function according to the new data
+    structure.
+
+
+07-Jul-2009  Alexandre Trilla  <atrilla@salle.url.edu>
+
+    * src/emolib/util/proc/TextData.java (getNumberOfParagraphs): addition of
+    this function.
+
+    * src/emolib/util/proc/ParagraphData.java (getNumberOfSentences): addition
+    of this function.
+
+    * src/emolib/util/proc/SentenceData.java (getNumberOfWords): addition of
+    this function according to the new data structure.
+
+    * src/emolib/statistic/Statistic.java: new module creation.
+    * src/emolib/statistic/average/ArithmeticMean.java
+
+
+02-Jul-2009  Alexandre Trilla  <atrilla@salle.url.edu>
+
+    * src/emolib/util/proc/TextData.java (getNumberOfWords): used to be
+    getSize.
+
+    * src/emolib/util/proc/WordData.java: new data structure.
+    * src/emolib/util/proc/TextData.java
+    * src/emolib/util/proc/SentenceData.java: creation.
+    * src/emolib/util/proc/ParagraphData.java: creation.
+    * src/emolib/splitter/bdt/SentenceSplitterBDT.java (applySentenceSplitting)
+    * all the rest of the source code files.
+
+    * src/emolib/util/massiveTextReplace.sh: creation.
+
+
+19-Jun-2009  Alexandre Trilla  <atrilla@salle.url.edu>
+
+    * src/emolib/classifier/formulae/unidimentional/NearestValenceSentimentCentroid.java:
+    creation.
+
+
+18-Jun-2009  Alexandre Trilla  <atrilla@salle.url.edu>
+
+    * src/emolib/util/eval/KFoldXValidation.java (main): inclusion of the
+    nearest sentiment centroid classifier.
+
+
+17-Jun-2009  Alexandre Trilla  <atrilla@salle.url.edu>
+
+    * src/emolib/classifier/formulae/bidimentional/NearestSentimentCentroid.java:
+    creation.
+
+
+27-Apr-2009  Alexandre Trilla  <atrilla@salle.url.edu>
+
+    * src/emolib/classifier/formulae/unidimentional/NearestValenceSentimentCentroidANSW.java:
+    creation.
+    * src/emolib/util/eval/KFoldXValidation.java
+
+
+22-Apr-2009  Alexandre Trilla  <atrilla@salle.url.edu>
+
+    * src/emolib/classifier/formulae/bidimentional/NearestSentimentCentroidANSW.java:
+    creation.
+    * src/emolib/util/eval/KFoldXValidation.java
+
+    * src/emolib/util/eval/valenceCentroids.pl: used to be
+    sentimentCentroids.pl.
+
+
+17-Apr-2009  Alexandre Trilla  <atrilla@salle.url.edu>
+
+    * src/emolib/util/eval/sentimentCentroids.pl: creation.
+
+    * src/emolib/classifier/formulae/unidimentional/NearestValenceSentimentCentroidANEW.java:
+    creation.
+    * src/emolib/util/eval/KFoldXValidation.java (main, evaluate): inclusion.
+
+
+16-Apr-2009  Alexandre Trilla  <atrilla@salle.url.edu>
+
+    * src/emolib/util/eval/semeval/sentiment.pl: creation.
+
+
+14-Apr-2009  Alexandre Trilla  <atrilla@salle.url.edu>
+
+    * src/emolib/util/eval/KFoldXValidation.java (main): addition of the F1
+    measure and the std in the results.
+
+
+09-Apr-2009  Alexandre Trilla  <atrilla@salle.url.edu>
+
+    * src/emolib/classifier/formulae/bidimentional/NearestSentimentCentroidANEW.java:
+    creation.
+    * src/emolib/util/eval/KFoldXValidation.java (main, evaluate): inclusion
+    of NearestSentimentCentroidANEW and FiveIntervalsKE.
+
+
+08-Apr-2009  Alexandre Trilla  <atrilla@salle.url.edu>
+
+    * src/emolib/util/eval/centroids.pl: creation.
+    
+    * src/emolib/classifier/formulae/EnhancedJooneTools.java: extended for
+    flexibility.
+
+    * src/emolib/classifier/formulae/bidimentional/JooneNeuralNetwork.java:
+    used to be the SimplePerceptron. Now it is a more flexible class.
+    * src/emolib/util/eval/KFoldXValidation.java
+
+    * src/emolib/util/eval/builder/BuildNeuralNetwork.java: creation.
+
+    * src/emolib/util/eval/tester/TestNeuralNetwork.java: creation.
+
+
+07-Apr-2009  Alexandre Trilla  <atrilla@salle.url.edu>
+
+    * src/emolib/classifier/Classifier.java: changed into an interface instead
+    of an abstract class.
+    * src/emolib/classifier/rules/tridimentional/FiveIntervalsKE.java
+    * src/emolib/classifier/formulae/bidimentional/KNearestNeighbor.java
+    * src/emolib/util/eval/semeval/SemevalCorpusCategorizerNN.java
+
+    * src/emolib/classifier/formulae/EnhancedJooneTools.java: creation.
+    Wrapper to the JOONE project.
+    * src/emolib/classifier/formulae/bidimentional/SimplePerceptron.java
+    * src/emolib/util/eval/KFoldXValidation.java
+
+    * src/emolib/util/eval/CorpusSentimentPlotter.sci: creation.
+
+    * src/emolib/util/eval/semeval/splitCorpusSentiment.sh: creation.
+
+    * src/emolib/util/eval/semeval/balanceSentimentDataset.sh: creation.
+
+
+06-Apr-2009  Alexandre Trilla  <atrilla@salle.url.edu>
+
+    * src/emolib/classifier/formulae/bidimentional/SimplePerceptron.java:
+    creation.
+
+
+18-Mar-2009  Alexandre Trilla  <atrilla@salle.url.edu>
+
+    * src/emolib/util/eval/CorpusSpacePlotter.sci: creation.
+
+    * src/emolib/util/eval/semeval/joiner.sh: creation.
+
+
+17-Mar-2009  Alexandre Trilla  <atrilla@salle.url.edu>
+
+    * src/emolib/util/eval/semeval/extractDimentions.sh: creation.
+
+
+13-Mar-2009  Alexandre Trilla  <atrilla@salle.url.edu>
+
+    * src/emolib/util/eval/CorpusPlotter.sci: Scilab script to plot a 2D
+    database.
+
+    * src/emolib/util/eval/semeval/splitCorpus.sh: creation.
+
+
+12-Mar-2009  Alexandre Trilla  <atrilla@salle.url.edu>
+
+    * src/emolib/util/eval/KFoldXValidation.java (evaluate): addition of 3-NN
+    and 5-NN.
+
+
+11-Mar-2009  Alexandre Trilla  <atrilla@salle.url.edu>
+
+    * src/emolib/classifier/Classifier.java (train): new abstract class with a
+    void train for KE classifiers.
+    * src/emolib/classifier/rules/tridimentional/FiveIntervalsKE.java
+    * src/emolib/classifier/formulae/bidimentional/KNearestNeighbor.java
+    * src/emolib/util/eval/semeval/SemevalCorpusCategorizerNN.java
+
+    * src/emolib/util/eval/KFoldXValidation.java (evaluate): process completed. Problem
+    if no examples appear in the test fold.
+    * src/emolib/util/eval/semeval/balanceDataset.sh: creation. Balances the
+    folds.
+
+
+10-Mar-2009  Alexandre Trilla  <atrilla@salle.url.edu>
+
+    * src/emolib/classifier/formulae/bidimentional/KNearestNeighbor.java
+    (setNumberOfNeighbors, getCategory): supports k neighbors.
+
+    * src/emolib/util/eval/KFoldXValidation.java (main, evaluate,
+    setBasicCotegories, constructors): ok up to partitioning the input corput
+    into the `k' folds.
+
+
+09-Mar-2009  Alexandre Trilla  <atrilla@salle.url.edu>
+
+    * src/emolib/util/eval/semeval/SemevalCorpusCategorizerNN.java
+    (computeResultingDimentions, changeBase): error fixed with the vector sum.
+
+    * src/emolib/classifier/formulae/bidimentional/KNearestNeighbor.java
+    (setK, getCategory): adaptation for k neighbors. Not finished yet.
+
+    * src/emolib/util/eval/KFoldXValidation.java: creation.
+
+
+08-Mar-2009  Alexandre Trilla  <atrilla@salle.url.edu>
+
+    * src/emolib/util/eval/semeval/SemevalCorpusCategorizerNN.java (main):
+    Russell model of affect ability.
+
+
+03-Mar-2009  Alexandre Trilla  <atrilla@salle.url.edu>
+
+    * src/emolib/util/eval/semeval/ExtractCoincidences.java (main): creates a
+    file with the coincident categories.
+
+    * src/emolib/util/eval/semeval/removeTags.sh: support to deal with the
+    whole Semeval dataset (training and testing).
+
+
+02-Mar-2009  Alexandre Trilla  <atrilla@salle.url.edu>
+
+    * src/emolib/util/eval/semeval/ExtractCoincidences.java: creation.
+
+
+01-Mar-2009  Alexandre Trilla  <atrilla@salle.url.edu>
+
+    * src/emolib/util/eval/semeval/SemevalCorpusCategorizerNN.java (main):
+    Scherer emotional values from the circumplex.
+
+
+27-Feb-2009  Alexandre Trilla  <atrilla@salle.url.edu>
+
+    * src/emolib/classifier/formulae/bidimentional/KNearestNeighbor.java
+    (getCategory): distances resolved.
+
+    * src/emolib/util/eval/semeval07/SemevalCorpusCategorizerNN.java: the
+    evaluation class to use de KNearestNeighbor class for the Semeval task.
+    * src/emolib/util/eval/semeval/SemevalCorpusCategorizerNN.java: change of
+    package and fixes.
+
+
+26-Feb-2009  Alexandre Trilla  <atrilla@salle.url.edu>
+
+    * src/emolib/classifier/Classifier.java (getCategory): inclusion of the
+    "language" parameter to compact the previous language-different classes.
+    * src/emolib/formatter/xml/MeanXMLFormatter.java
+    * src/emolib/classifier/rules/tridimentional/FiveIntervalsKE.java
+
+    * src/emolib/classifier/formulae/bidimentional/KNearestNeighbor.java:
+    creation.
+
+
+19-Feb-2009  Alexandre Trilla  <atrilla@salle.url.edu>
+
+    * src/emolib/classifier/rules/tridimentional: new structure of the
+    classifiers available so far.
+    * src/emolib/util/eval/semeval07/classifyValence.sh: creation.
+
+
+18-Feb-2009  Alexandre Trilla  <atrilla@salle.url.edu>
+
+    * src/emolib/util/eval/ConfusionMatrixCalculator.java (evaluate): a setter
+    instead of the adder fixed the anomaly + percentages calculations.
+
+    * src/emolib/classifier: creation of the package that will contain all
+    the classes related to machine learning in order to classify the emotional
+    tags.
+    * src/emolib/classifier/Classifier.java
+    * src/emolib/classifier/intervalbasedrules/EnglishFiveIntervals.java
+    * src/emolib/classifier/intervalbasedrules/SpanishFiveIntervals.java
+
+
+17-Feb-2009  Alexandre Trilla  <atrilla@salle.url.edu>
+
+    * src/emolib/util/eval/ConfusionMatrixCalculator.java (main,
+    printConfusionMatrix): fix to print the confusion matrix in the main
+    process and pretty tab the results.
+
+
+16-Feb-2009  Alexandre Trilla  <atrilla@salle.url.edu>
+
+    * src/emolib/util/eval/ConfusionMatrixCalculator.java (initialize,
+    evaluate, printConfusionMatrix, printSynopsis, main): body of the class.
+
+
+15-Feb-2009  Alexandre Trilla  <atrilla@salle.url.edu>
+
+    * src/emolib/util/eval/ConfusionMatrixCalculator.java: creation.
+
+
+14-Feb-2009  Alexandre Trilla  <atrilla@salle.url.edu>
+
+    * src/emolib/eval/semeval07/expandEmotions.sh
+
+    * src/emolib/eval moved to src/emolib/util/eval
+
+
+13-Feb-2009  Alexandre Trilla  <atrilla@salle.url.edu>
+
+    * src/emolib/eval: example and evaluation classes.
+    * src/emolib/eval/semeval07/extractCategory.sh
+    * src/emolib/eval/semeval07/removeTags.sh
+
+
+11-Feb-2009  Alexandre Trilla  <atrilla@salle.url.edu>
+
+    * src/emolib/wsd/openthes/OpenThesWSD.java (wsdParagraph, wsdSentence): 
+    ability to analyze verbs and adjectives separately.
+
+    * src/emolib/util/proc/WordData.java (constructors): java generics fix.
+
+
+09-Feb-2009  Alexandre Trilla  <atrilla@salle.url.edu>
+
+    * src/emolib/wsd/openthes/OpenThesWSD.java (applyWSD): analysis at
+    sentence or paragraph level ability.
+    * tst/ExampleTextFile.java (main): better interface, no recompilation for
+    language change.
+
+
+05-Feb-2009  Alexandre Trilla  <atrilla@salle.url.edu>
+
+    * src/emolib/eks/anlw/EmotionalKeywordSpotterANLW.java (applyEKS): no
+    default (neutral) dimentions for OOV words.
+
+    * src/emolib/formatter/xml/MeanXMLFormatter.java (applyFormatting):
+    account for the dimentions only.
+    * src/emolib/formatter/xml/EnglishFiveCategorizer.java: creation.
+
+    * src/emolib/util/proc/WordData.java: flag for the emotional dimentions.
+
+
+04-Feb-2009  Alexandre Trilla  <atrilla@salle.url.edu>
+
+    * src/emolib/wsd/simlib/SimLibWSD.java (applyWSD, buildSynonyms): code
+    fixes to correctly extract the synonyms from WordNet though JavaSimLib.
+    * src/emolib/eks/anlw: package name changed with the classes within in
+    order to reuse it for the different languages of study.
+
+
+02-Feb-2009  Alexandre Trilla  <atrilla@salle.url.edu>
+
+    * src/emolib/wsd/simlib: creation of the files that integrate the Java
+    Similarity Library into EmoLib.
+    * src/emolib/wsd/simlib/IndexBroker.java
+    * src/emolib/wsd/simlib/SimilarityAssessor.java
+    * src/emolib/wsd/simlib/SimLibWSD.java
+    * src/emolib/wsd/simlib/WordNotFoundException.java
+
+
+24-Jan-2009  Alexandre Trilla  <atrilla@salle.url.edu>
+
+    * src/emolib/pos/stanford/EnglishStanford.java: creation of this wrapper.
+
+
+19-Jan-2009  Alexandre Trilla  <atrilla@salle.url.edu>
+
+    * src/emolib/util/printer/Printer.java (applyPrinting): echo_stems,
+    echo_stemmed_synonyms, echo_nouns, echo_word_class, echo_word_pos.
+
+    * src/emolib/util/proc/WordData.java: stemmed word sense availability, POS
+    flag.
+    * src/emolib/stemmer/snowball/GenericSnowballStemmer.java (applyStemming)
+    * src/emolib/eks/answ/EmotionalKeywordSpotterANSW.java (applyEKS)
+
+
+16-Jan-2009  Alexandre Trilla  <atrilla@salle.url.edu>
+
+    * src/emolib/formatter/xml/MeanXMLFormatter.java (applyFormatting):
+    account for modifiers in the computation of the valence.
+
+15-Jan-2009  Alexandre Trilla  <atrilla@salle.url.edu>
+
+    * src/emolib/tokenizer/Tokenizer.java (getData, fillConfigurationValues, 
+    getWordModifierValue, inputData): errors correction. Complete support for
+    modifiers.
+
+    * src/emolib/util/proc/WordData.java (getModifierValue): typo. No more
+    emotional dimentions containers.
+    * src/emolib/formatter/xml/MeanXMLFormatter.java (applyFormatting)
+
+    * src/emolib/eks/answ/EmotionalKeywordSpotterANSW.java (newProperties, applyEKS):
+    any word with emotional content obtains a value, event the words not found
+    in the dictionary or their synonyms.
+
+    * src/emolib/util/printer/Printer.java (echo_modifiers,
+    echo_emotional_words): ability to print
+    the modifiers, the emotional words  and their vaues.
+
+
+13-Jan-2009  Alexandre Trilla  <atrilla@salle.url.edu>
+
+    * src/emolib/util/printer/Printer.java (register, newProperties,
+    applyPrinting): support for printing the number of words of a paragraph.
+
+    * src/emolib/util/proc/WordData.java (setAsModifier, isModifier,
+    setModifierValue, getMOdifierValue): support for modifiers.
+    * src/emolib/tokenizer/Tokenizer.java (putModifierValue, getData,
+    register, newProperties, initialize)
+    * src/emolib/tokenizer/lexer/spanish/SpanishLexer.jj (parseSpanishGrammar)
+
+
+12-Jan-2009  Alexandre Trilla  <atrilla@salle.url.edu>
+
+    * src/emolib/eks/answ/EmotionalKeywordSpotterANSW.java (register,
+    newProperties, applyEKS, getDefaultSynonymDimentions): ability to deal
+    with the synonyms.
+
+    * src/emolib/formatter/xml/MeanXMLFormatter.java (applyFormatting): only
+    words with set emotional dimentions are taken into consideration.
+    * src/emolib/util/proc/WordData.java: flag for the emotional dimentions.
+
+
+09-Jan-2009  Alexandre Trilla  <atrilla@salle.url.edu>
+
+    * src/emolib/wsd/openthes/OpenThesWSD.java (initialize, createIndex,
+    applyWSD): problems casting arrays fixed.
+
+    * src/emolib/util/proc/WordData.java (containsSynonyms): function that
+    interacts with the synonyms addition flags.
+
+    * src/emolib/util/printer: addition of a printer to monitor the data
+    flowing in the processing pipeline.
+
+    * All Copyright references have been updated to the new year 2009.
+
+
+08-Jan-2009  Alexandre Trilla  <atrilla@salle.url.edu>
+
+    * src/emolib/wsd/openthes/OpenThesWSD.java (initialize, createIndex,
+    applyWSD): problems casting arrays fixed.
+    * src/emolib/util/proc/WordData.java (setSense, getSense)
+
+
+07-Jan-2009  Alexandre Trilla  <atrilla@salle.url.edu>
+
+    * src/emolib/wsd/openthes/OpenThesWSD.java initialize, createIndex,
+    applyWSD): code fix.
+
+    * src/emolib/util/proc/WordData.java (setSense, getSense): addition of the
+    word-sense.
+
+
+29-Dec-2008  Alexandre Trilla  <atrilla@salle.url.edu>
+
+    * src/emolib/wsd/openthes/OpenThesWSD.java(initialize, createIndexFile):
+    errors fixed to read the thesaurus.
+
+
+24-Dec-2008  Alexandre Trilla  <atrilla@salle.url.edu>
+
+    * src/emolib/wsd/openthes/OpenThesWSD.java: creation.
+
+
+19-Dec-2008  Alexandre Trilla  <atrilla@salle.url.edu>
+
+    * src/emolib/formatter/xml/SpanishFiveCategorizer.java: creation
+
+    * src/emolib/formatter/xml/MeanXMLFormatter.java(newProperties,
+    initialize, applyFormatting): correct use of reflection.
+
+
+17-Dec-2008  Alexandre Trilla  <atrilla@salle.url.edu>
+
+    * src/emolib/formatter/xml/MeanXMLFormatter.java (applyFormatting,
+    outputData): dereferences fixed.
+
+    * src/emolib/AffectiveTagger.java (inputData, initInputter): method
+    separation.
+
+    * tst/ExampleTextFile.java (main): new simpler user interface.
+
+
+16-Dec-2008  Alexandre Trilla  <atrilla@salle.url.edu>
+
+    * src/emolib/formatter/xml/MeanXMLFormatter.java (newProperties):
+    parameter name.
+    * src/emolib/formatter/xml/MeanXMLFormatter.java (applyFormatting,
+    outputData): implementations. No stdout option.
+
+    * src/emolib/AffectiveTagger.java (outputData): null fix.
+
+15-Dec-2008  Alexandre Trilla  <atrilla@salle.url.edu>
+
+    * src/emolib/AffectiveTagger.java: propertied deleted, they were not
+    necessary, public methods again, getData again due to the previous
+    specifications.
+    * src/emolib/AffectiveTagger.java (inputData, outputData): generic methods
+    to put data into the tagger pipeline and retrieve the results.
+
+    * src/emolib/tokenizer/Tokenizer.java (getWord, getWordClass,
+    getPossibleEmotionalContent): functions to retrieve the private
+    variables.
+    * src/emolib/tokenizer/Tokenizer.java (inputData): method to feed the
+    the tokenizer and thus the processing pipeline.
+
+    * tst/Example.java (main): contemplates the more abstract structure.
+    * tst/ExampleTextFile.java (main)
+
+
+12-Dec-2008  Alexandre Trilla  <atrilla@salle.url.edu>
+
+    * src/emolib/AffectiveTagger.java (getResult, setDataSource,
+    setPredecessor): private methods/functions.
+    * src/emolib/AffectiveTagger.java (newProperties): new properties added,
+    inputterclass, outputterclass and inputdataclass.
+
+
+11-Dec-2008  Alexandre Trilla  <atrilla@salle.url.edu>
+
+    * src/emolib/AffectiveTagger.java (getResult): previous getData.
+
+
+09-Dec-2008  Alexandre Trilla  <atrilla@salle.url.edu>
+
+    * src/emolib/util/proc/WordData.java (paragraphCount, sentenceCount):
+    added methods and functions to deal with the paragraph ans sentence
+    counts.
+
+    * src/emolib/splitter/bdt/SentenceSplitterBDT.java
+    (applySentenceSplitting): the method to split sentences.
+    * src/emolib/splitter/bdt/SentenceSplitterBDT.java (startsWithSmallLetter)
+
+
+04-Dec-2008  Alexandre Trilla  <atrilla@salle.url.edu>
+
+    * test/ExampleTextFile.java: creation.
+    * /tst: rename of /test.
+    * src/emolib/tokenizer/lexer/spanish/SpanishLexer.jj (TOKENS): FIN_FRASE
+    corrected.
+    * src/emolib/tokenizer/Tokenizer.java (getData): error correction, the
+    blanck CD at the start of an acquisition does not appear anymore.
+    * src/emolib/splitter/SentenceSplitter.java: creation.
+    * src/emolib/splitter/bdt/SentenceSplitterBDT.java: creation.
+
+
+02-Dec-2008  Alexandre Trilla  <atrilla@salle.url.edu>
+
+    * src/emolib/eks/answ/DictionaryANSW.java: the indexes were retrieved from
+    theDataBase when they should be retrieved from theKeys.
+
+
+01-Dec-2008  Alexandre Trilla  <atrilla@salle.url.edu>
+
+    * src/emolib/eks/answ/DimentionsANSW.java (setStemKey, getStemKey):
+    dealing with the stem directly.
+
+    * src/emolib/eks/answ/EmotionalKeywordSpotterANSW.java (newProperties):
+    the weight factor.
+    * src/emolib/eks/answ/EmotionalKeywordSpotterANSW.java (applyEKS):
+    contemplates the weights if conflation occurs due to different POS.
+    * src/emolib/eks/answ/EmotionalKeywordSpotterANSW.java
+    (getDefaultDimentions)
+
+    * src/emolib/eks/answ/DictionaryANSW.java: now the database is composd of
+    two ArrayLists and the whole class has been modified.
+
+    * test/Example.java (main): shows the emotional dimentions.
+
+
+28-Nov-2008  Alexandre Trilla  <atrilla@salle.url.edu>
+
+    * src/emolib/eks/answ/EmotionalKeywordSpotterANSW.java (applyEKS,
+    register, newProperties): dealing with the emotional content of the key.
+    * src/emolib/eks/answ/DictionaryANSW.java (isProducedByNoun)
+    * src/emolib/eks/answ/DimentionsANSW.java (DimentionsANSW): category
+    assignation.
+
+    * src/emolib/util/proc/WordData.java (setAsVerb, setAsAdjective,
+    setAsNoun, isNoun, isVerb, isAdjective): functions and methods to deal
+    with the word-class of this WordData object.
+    * src/emolib/pos/qtag/SpanishQTag.java (applyPOSTagging)
+
+
+27-Nov-2008  Alexandre Trilla  <atrilla@salle.url.edu>
+
+    * src/emolib/eks/answ/DictionaryANSW.java: creation.
+    * src/emolib/eks/answ/DimentionsANSW.java: creation.
+    * src/emolib/eks/answ/EmotionalKeywordSpotterANSW.java
+
+    * src/emolib/util/proc/WordData.java: addition of emotional dimentions,
+    which are valence, activation and control, and classification.
+
+
+25-Nov-2008  Alexandre Trilla  <atrilla@salle.url.edu>
+
+    * src/emolib/pos/qtag/SpanishQTag.java (initialization): contemplates the
+    missing parameter in the config file.
+
+    * src/emolib/eks/EmotionalKeywordSpotting.java: creation.
+    * src/emolib/eks/answ/EmotionalKeywordSpottingANSW.java: creation.
+
+
+24-Nov-2008  Alexandre Trilla  <atrilla@salle.url.edu>
+
+    * src/emolib/util/proc/WordData.java (setEmotionaContent,
+    hasEmotionalContent): emotional container addition
+
+    * src/emolib/tokenizer/lexer/spanish/SpanishLexer.jj: downgrade to
+    previous release. Original tagset.
+    * src/emolib/tokenizer/lexer/spanish/SpanishLexer.jj (parseGrammar): words
+    with affective content are marked.
+    * src/emolib/tokenizer/Tokenizer.java (getData,
+    setPossibleEmotionalContent): emotional content possibility.
+
+    * src/emolib/stemmer/snowball/GeneralSnowballStemmer.java (applyStemming):
+    the stemming process.
+    * test/Example.java (main): stemming addition
+
+
+21-Nov-2008  Alexandre Trilla  <atrilla@salle.url.edu>
+
+    * src/emolib/tokenizer/english: deletion
+
+    * src/emolib/tokenizer/lexer/spanish/SpanishLexer.jj: new tagset, not
+    complete yet.
+
+
+20-Nov-2008  Alexandre Trilla  <atrilla@salle.url.edu>
+
+    * src/emolib/stemmer/snowball/: classes of the Snowball package
+    * src/emolib/stemmer/snowball/GeneralSnowballStemmer.java: creation
+    * src/emolib/util/proc/WordData.java (wordStem, setWordStem, getWordStem):
+    inclusion of this new dimension.
+
+19-Nov-2008  Alexandre Trilla  <atrilla@salle.url.edu>
+
+    * src/emolib/stemmer/Stemmer.java: creation
+
+    * src/emolib/util/proc/WordData.java (constructor): addition of the
+    wordSense class variable.
+    * src/emolib/pos/qtag/SpanishQTag.java /applyPOSTagging)
+    * test/Example.java
+
+
+18-Nov-2008  Alexandre Trilla  <atrilla@salle.url.edu>
+
+    * src/emolib/util/proc/WordData.java (constructor, setWordPOS, getWordPOS): inclusion.
+
+    * src/emolib/pos/POSTagger.java: creation
+    * src/emolib/pos/qtag/SpanishQTag.java: creation
+
+    * src/emolib/util/proc/TextData.java (getWordsAsArrayOfStrings): direct
+    extraction of the array of strings.
+    * src/emolib/util/proc/TextData.java (getWordData): creation
+    * src/emolib/util/proc/TextData.java (getWordData): creation
+    * src/emolib/util/proc/TextData.java (setWordData): creation
+
+    * test/Example.java (main): corrections according to the previous
+    modifications.
+
+
+15-Nov-2008  Alexandre Trilla  <atrilla@salle.url.edu>
+
+    * src/emolib/AffectiveTagger.java: new Tagger.java
+    * test/Example.java (main): new AffectiveTagger.
+
+
+14-Nov-2008  Alexandre Trilla  <atrilla@salle.url.edu>
+
+    * src/emolib/tokenizer/Tokenizer.java (constructor): removal. The
+    initialization process is done by the Tagger.
+    * src/test/Example.java (main): now the new instantiation of the lexer has
+    to be initialized manually, the way the Tagger does.
+
+    * src/emolib/wsd/WordSenseDisembiguator.java: creation.
+
+
+13-Nov-2008  Alexandre Trilla  <atrilla@salle.url.edu>
+
+    * src/emolib/tokenizer/lexer/spanish/SpanishLexer.java: ARTICULO_FUSION
+    included in the syntax. Problem with the "del" particle solved.
+    * src/emolib/tokenizer/Tokenizer.java (getLanguage): addition
+    * src/emolib/tokenizer/Tokenizer.java: deletion of the public getters.
+
+
+12-Nov-2008  Alexandre Trilla  <atrilla@salle.url.edu>
+
+    * test/Example.java (many classes): reorganization
+    * test/emolib.config.xml: creation
+    * cfg/emolib.config.xml: correct
+    * src/emolib/tokenizer/Tokenizer.java (initialize, parseGrammar, getNew):
+    additions
+    * src/emolib/tokenizer/lexer/english/EnglishLexer.jj: creation, based on
+    Analyser.jj
+    * src/emolib/tokenizer/lexer/spanish/SpanishLexer.jj: creation, based on
+    Analyzer.jj
+
+
+11-Nov-2008  Alexandre Trilla  <atrilla@salle.url.edu>
+    * src/emolib/Tagger.java: creation
+    * src/emolib/util/: some Sphinx-4 files
+    * src/emolib/util/conf/: Sphinx-4 files
+    * src/emolib/util/proc/TextData.java: creation
+
+
+10-Nov-2008  Alexandre Trilla  <atrilla@salle.url.edu>
+
+    * src/emolib/tokenizer/Tokenizer.java: change method and function names
+    to more coherent.
+    * src/emolib/tokenizer/english/Analyzer.jj
+    * src/emolib/tokenizer/spanish/Analyzer.jj
+    * test/Example.java
+    * src/emolib/util/proc/: some Sphinx-4 files
+    * src/emolib/util/proc/WordData.java: creation
+    * src/emolib/util/proc/TextDataProcessor.java: creation
+
+9-Nov-2008  Alexandre Trilla  <atrilla@salle.url.edu>
+
+    * test/Example.java (processText): print some useful interface help.
+
+
+7-Nov-2008  Alexandre Trilla  <atrilla@salle.url.edu>
+
+    * src/emolib/tokenizer/spanish/Analyzer.jj
+
+    * test/Example.java
+
+
+5-Nov-2008  Alexandre Trilla  <atrilla@salle.url.edu>
+
+    * src/emolib/tokenizer/Tokenizer.java
+
+    * src/emolib/tokenizer/english/Analyzer.jj

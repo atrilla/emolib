@@ -1,0 +1,120 @@
+EmoLib: Emotional Library
+=========================
+
+One line description:
+
+	Library that tags incoming affective text
+
+
+Attributions:
+
+	Enginyeria i Arquitectura La Salle
+	(Universitat Ramon Llull)
+	http://www.salle.url.edu 
+
+
+Development:
+
+	EmoLib was originally developed by David Garcia
+	as his Master's Thesis in Multimedia
+	Engineering.
+
+	Presently, EmoLib is being developed by
+	Alexandre Trilla as part of his Ph.D. Thesis in
+	Information Technologies.
+
+
+Credentials:
+
+	This product includes software developed by:
+
+	* JavaCC
+	Sun Microsystems, Inc.
+	https://javacc.dev.java.net/
+
+	* Sphinx-4
+	Carnegie Mellon University
+	http://cmusphinx.sourceforge.net/sphinx4/
+
+	* QTag
+	Oliver Mason
+	http://www.english.bham.ac.uk/staff/omason/software/qtag.html
+
+	* Snowball
+	The Snowball Team
+	http://snowball.tartarus.org/
+
+	* JDOM
+	The JDOM Project
+	http://www.jdom.org
+
+	* Apache Lucene
+	The Apache Software Foundation
+	http://lucene.apache.org/java/docs/index.html
+
+	* Java Similarity Library
+	Nuno Seco
+	http://eden.dei.uc.pt/~nseco/javasimlib.tar.gz
+
+	* Stanford POS Tagger
+	The Stanford Natural Language Processing Group
+	http://nlp.stanford.edu/software/tagger.shtml
+
+	* javax.servlet package
+	Sun Microsystems, Inc & Apache Software Foundation
+	http://www.mortbay.org/jetty/
+
+    * Checkstyle
+    The Checkstyle Team
+    http://checkstyle.sourceforge.net/
+
+    * LingPipe
+    Alias-i, Inc
+    http://alias-i.com/lingpipe/
+
+    * Weka
+    University of Waikato
+    http://www.cs.waikato.ac.nz/~ml/weka/
+
+    * Jsoup
+    Jonathan Hedley
+    http://jsoup.org/
+
+
+	This product includes data produced by:
+
+	* OpenThesaurus-es
+	Marcelo Garrone
+	http://openthes-es.berlios.de
+
+	* Affective Norms for English Words (ANEW)
+	Psychonomic Society, Inc.
+	http://www.psychonomic.org/
+
+	* Affective Norms for Spanish Words (ANSW)
+	Psychonomic Society, Inc.
+	http://www.psychonomic.org/
+
+	* Spanish Data of the CoNLL 2002 Shared Task 
+	with POS tags
+	Xavier Carreras
+	http://www.lsi.upc.edu/~nlp/web/index.php
+
+    * Balance CSS template
+    Free CSS Templates
+    http://www.freecsstemplates.org
+
+    * Spanish WordNet
+    Universitat Politecnica de Catalunya (UPC)
+    http://www.lsi.upc.edu/~nlp
+
+
+License:
+
+	Copyright (c) 2007-2012
+	Enginyeria i Arquitectura La Salle (Universitat Ramon Llull)
+	All rights reserved.
+
+	You should have received a copy of the rights granted with this
+	distribution of EmoLib. See COPYING.
+

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<web-app 
+   xmlns="http://java.sun.com/xml/ns/javaee" 
+   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+   xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" 
+   metadata-complete="true"
+   version="2.5"> 
+
+  <description>
+    Processing EmoLib service web.xml file.  
+  </description>
+
+  <servlet>
+    <servlet-name>processingServletEN</servlet-name>
+    <servlet-class>emolib.util.servlet.en.ProcessingService</servlet-class>
+    <load-on-startup>1</load-on-startup>
+  </servlet> 
+
+  <servlet>
+    <servlet-name>processingServletES</servlet-name>
+    <servlet-class>emolib.util.servlet.es.ProcessingService</servlet-class>
+    <load-on-startup>1</load-on-startup>
+  </servlet> 
+
+  <servlet-mapping> <servlet-name>processingServletEN</servlet-name> <url-pattern>/en/processEmoLib/*</url-pattern> </servlet-mapping>
+  <servlet-mapping> <servlet-name>processingServletES</servlet-name> <url-pattern>/es/processEmoLib/*</url-pattern> </servlet-mapping>
+  
+</web-app>

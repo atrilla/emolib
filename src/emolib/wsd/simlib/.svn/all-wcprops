@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/DTM/speech/!svn/ver/221/nlp/emolib/src/emolib/wsd/simlib
+END
+WordNotFoundException.java
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/DTM/speech/!svn/ver/113/nlp/emolib/src/emolib/wsd/simlib/WordNotFoundException.java
+END
+SimilarityAssessor.java
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/DTM/speech/!svn/ver/199/nlp/emolib/src/emolib/wsd/simlib/SimilarityAssessor.java
+END
+IndexBroker.java
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/DTM/speech/!svn/ver/199/nlp/emolib/src/emolib/wsd/simlib/IndexBroker.java
+END
+SimLibWSD.java
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/DTM/speech/!svn/ver/221/nlp/emolib/src/emolib/wsd/simlib/SimLibWSD.java
+END
+package.html
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/DTM/speech/!svn/ver/221/nlp/emolib/src/emolib/wsd/simlib/package.html
+END

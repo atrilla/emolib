@@ -1,0 +1,101 @@
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/DTM/speech/!svn/ver/228/nlp/emolib/src/emolib/classifier/machinelearning
+END
+RiskWeightedNaiveBayes.java
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/DTM/speech/!svn/ver/221/nlp/emolib/src/emolib/classifier/machinelearning/RiskWeightedNaiveBayes.java
+END
+TASS2Levels.java
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/DTM/speech/!svn/ver/228/nlp/emolib/src/emolib/classifier/machinelearning/TASS2Levels.java
+END
+RiskLogReg.java
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/DTM/speech/!svn/ver/221/nlp/emolib/src/emolib/classifier/machinelearning/RiskLogReg.java
+END
+MultinomialNB.java
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/DTM/speech/!svn/ver/221/nlp/emolib/src/emolib/classifier/machinelearning/MultinomialNB.java
+END
+HierarchicalARNReduced.java
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/DTM/speech/!svn/ver/221/nlp/emolib/src/emolib/classifier/machinelearning/HierarchicalARNReduced.java
+END
+BernoulliNB.java
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/DTM/speech/!svn/ver/221/nlp/emolib/src/emolib/classifier/machinelearning/BernoulliNB.java
+END
+ARNReduced.java
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/DTM/speech/!svn/ver/221/nlp/emolib/src/emolib/classifier/machinelearning/ARNReduced.java
+END
+Logistic.java
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/DTM/speech/!svn/ver/223/nlp/emolib/src/emolib/classifier/machinelearning/Logistic.java
+END
+package.html
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/DTM/speech/!svn/ver/221/nlp/emolib/src/emolib/classifier/machinelearning/package.html
+END
+LSA.java
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/DTM/speech/!svn/ver/221/nlp/emolib/src/emolib/classifier/machinelearning/LSA.java
+END
+KNearestNeighbour.java
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/DTM/speech/!svn/ver/221/nlp/emolib/src/emolib/classifier/machinelearning/KNearestNeighbour.java
+END
+WekaMultinomialNB.java
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/DTM/speech/!svn/ver/221/nlp/emolib/src/emolib/classifier/machinelearning/WekaMultinomialNB.java
+END
+SupportVectorMachine.java
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/DTM/speech/!svn/ver/221/nlp/emolib/src/emolib/classifier/machinelearning/SupportVectorMachine.java
+END
+NaiveBayes.java
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/DTM/speech/!svn/ver/221/nlp/emolib/src/emolib/classifier/machinelearning/NaiveBayes.java
+END
+OrdinalLogReg.java
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/DTM/speech/!svn/ver/223/nlp/emolib/src/emolib/classifier/machinelearning/OrdinalLogReg.java
+END
+NearestCentroid.java
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/DTM/speech/!svn/ver/221/nlp/emolib/src/emolib/classifier/machinelearning/NearestCentroid.java
+END

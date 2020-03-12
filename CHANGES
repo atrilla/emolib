@@ -1,0 +1,118 @@
+17-Nov-2011  Alexandre Trilla  <atrilla@salle.url.edu>
+
+    * EmoLib-0.1.5
+    Spanish WordNet integrated into the WSD.
+
+ 
+16-Jun-2011  Alexandre Trilla  <atrilla@salle.url.edu>
+
+    * EmoLib-0.1.4
+    Addition of own implementations for Multinomial Logistic Regression
+    and Ordinal Logistic Regression classifiers.
+
+
+08-Nov-2010  Alexandre Trilla  <atrilla@salle.url.edu>
+
+    * EmoLib-0.1.3
+    Addition of Support Vector Machines.
+
+
+16-Nov-2010  Alexandre Trilla  <atrilla@salle.url.edu>
+
+    * EmoLib-0.1.2
+    Addition of Logistic Regression.
+
+
+27-Jun-2010  Alexandre Trilla  <atrilla@salle.url.edu>
+
+    * EmoLib-0.1.1
+    System used for the Ph.D.(ABD). Inclusion of the Associative
+    Relational Classifier, the Naive Bayes (for emotional
+    dimensions), and some refinement strategies, namely
+    hierarchhical and risk assessed.
+
+
+22-Sep-2009  Alexandre Trilla  <atrilla@salle.url.edu>
+
+    * EmoLib-0.1.0
+    New data structure successfully updated. The classifiers are
+    separate modules in the pipeline and can be trained and saved
+    into an external XML file. This system is debugged wrt the one 
+    used for the Interspeech 2009 publication.
+
+
+09-Apr-2009  Alexandre Trilla  <atrilla@salle.url.edu>
+
+    * EmoLib-0.0.12
+    NearestSentimentCentroidANEW classifier addition.
+
+
+04-Feb-2009  Alexandre Trilla  <atrilla@salle.url.edu>
+
+    * EmoLib-0.0.11
+    All classes adapted to make use of the English resources.
+
+    * EmoLib-0.0.10
+    Java Similarity Library for the WSD process using WordNet.
+
+
+24-Jan-2009  Alexandre Trilla  <atrilla@salle.url.edu>
+
+    * EmoLib-0.0.9
+    English POS tagger using the Stanford POS tagger.
+
+
+23-Jan-2009  Alexandre Trilla  <atrilla@salle.url.edu>
+
+    * EmoLib-0.0.8
+    English lexer for the tokenization.
+
+
+19-Jan-2009  Alexandre Trilla  <atrilla@salle.url.edu>
+
+    * EmoLib-0.0.7
+    WSD with OpenThesaurus-ES + modifiers + printer monitor.
+
+
+19-Dec-2008  Alexandre Trilla  <atrilla@salle.url.edu>
+
+    * EmoLib-0.0.6
+    XML output formatter addition.
+
+
+09-Dec-2008  Alexandre Trilla  <atrilla@salle.url.edu>
+
+    * EmoLib-0.0.5
+    Sentence Splitter addition.
+
+02-Dec-2008  Alexandre Trilla  <atrilla@salle.url.edu>
+
+    * Emolib-0.0.4
+    Emotional Keyword Spotter with ANSW data addition.
+
+
+24-Nov-2008  Alexandre Trilla  <atrilla@salle.url.edu>
+
+    * Emolib-0.0.3
+    Snowball stemmer addition.
+
+
+18-Nov-2008  Alexandre Trilla  <atrilla@salle.url.edu>
+
+    * EmoLib-0.0.2
+    QTag Part-Of-Speech tagger addition.
+
+
+13-Nov-2008  Alexandre Trilla  <atrilla@salle.url.edu>
+
+    * EmoLib-0.0.1
+    Configuration Manager from Sphinx-4 included. New structure enabled for
+    configuration.
+
+
+7-Nov-2008  Alexandre Trilla  <atrilla@salle.url.edu>
+
+    * EmoLib-0.0.0
+    Tokenizer complete. It performs the morphosyntactic analysis on the
+    incoming text, in English and Spanish.
+

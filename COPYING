@@ -1,0 +1,359 @@
+The MIT License (MIT)
+
+EmoLib - Emotional Library
+
+Copyright (c) 2007-2012, 2020
+Alexandre Trilla &
+Enginyeria i Arquitectura La Salle (Universitat Ramon Llull)
+ 
+
+Permission is hereby granted, free of charge, to any person obtaining
+a copy of this software and associated documentation files (the 
+"Software"), to deal in the Software without restriction, including 
+without limitation the rights to use, copy, modify, merge, publish, 
+distribute, sublicense, and/or sell copies of the Software, and to 
+permit persons to whom the Software is furnished to do so, subject to
+the following conditions:
+
+The above copyright notice and this permission notice shall be 
+included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, 
+EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF 
+MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND 
+NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS 
+BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN 
+ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN 
+CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+============================================================================
+
+  Copyright (c) 2007-2012
+  Enginyeria i Arquitectura La Salle (Universitat Ramon Llull)
+  All rights reserved.
+  
+  Some parts of this software work are distributed under a different licence
+  as stated by their correpondent developers.
+
+============================================================================
+
+* JavaCC
+* Copyright (c) 1995-2008, Sun Microsystems, Inc.
+* All rights reserved.
+*
+* Redistribution and use in source and binary forms, with or without
+* modification, are permitted provided that the following conditions are met:
+*     * Redistributions of source code must retain the above copyright
+*       notice, this list of conditions and the following disclaimer.
+*     * Redistributions in binary form must reproduce the above copyright
+*       notice, this list of conditions and the following disclaimer in the
+*       documentation and/or other materials provided with the distribution.
+*     * Neither the name of the Sun Microsystems, Inc.
+*       nor the names of its contributors may be used 
+*       to endorse or promote products derived from this software without 
+*       specific prior written permission.
+*
+* THIS SOFTWARE IS PROVIDED BY Sun Microsystems, Inc. ''AS IS'' AND ANY
+* EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
+* WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+* DISCLAIMED. IN NO EVENT SHALL Sun Microsystems, Inc. BE LIABLE FOR ANY
+* DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
+* (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
+* LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND
+* ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+* (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
+* SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+----------------------------------------------------------------------------
+
+* Sphinx-4
+* Copyright 1999-2004 Carnegie Mellon University.  
+* Portions Copyright 2002-2004 Sun Microsystems, Inc.  
+* Portions Copyright 2002-2004 Mitsubishi Electric Research Laboratories.
+* All Rights Reserved.  Use is subject to license terms.
+* 
+* Redistribution and use in source and binary forms, with or without
+* modification, are permitted provided that the following conditions
+* are met:
+* 
+* 1. Redistributions of source code must retain the above copyright
+*    notice, this list of conditions and the following disclaimer. 
+* 
+* 2. Redistributions in binary form must reproduce the above copyright
+*    notice, this list of conditions and the following disclaimer in
+*    the documentation and/or other materials provided with the
+*    distribution.
+* 
+* 3. Original authors' names are not deleted.
+* 
+* 4. The authors' names are not used to endorse or promote products
+*    derived from this software without specific prior written
+*    permission.
+* 
+* This work was supported in part by funding from the Defense Advanced 
+* Research Projects Agency and the National Science Foundation of the 
+* United States of America, the CMU Sphinx Speech Consortium, and
+* Sun Microsystems, Inc.
+* 
+* CARNEGIE MELLON UNIVERSITY, SUN MICROSYSTEMS, INC., MITSUBISHI
+* ELECTRONIC RESEARCH LABORATORIES AND THE CONTRIBUTORS TO THIS WORK
+* DISCLAIM ALL WARRANTIES WITH REGARD TO THIS SOFTWARE, INCLUDING ALL
+* IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL
+* CARNEGIE MELLON UNIVERSITY, SUN MICROSYSTEMS, INC., MITSUBISHI
+* ELECTRONIC RESEARCH LABORATORIES NOR THE CONTRIBUTORS BE LIABLE FOR
+* ANY SPECIAL, INDIRECT OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
+* WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN
+* ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT
+* OF OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
+
+----------------------------------------------------------------------------
+
+* QTag
+* Copyright (c) 1994-2003, Oliver Mason
+* Non-commercial use only.
+
+----------------------------------------------------------------------------
+
+* Snowball
+* Copyright (c) 2001, Dr. Martin Porter &
+* 2002, Richard Boulton
+* All rights reserved.
+*
+* Redistribution and use in source and binary forms, with or without
+* modification, are permitted provided that the following conditions are met:
+*     * Redistributions of source code must retain the above copyright
+*       notice, this list of conditions and the following disclaimer.
+*     * Redistributions in binary form must reproduce the above copyright
+*       notice, this list of conditions and the following disclaimer in the
+*       documentation and/or other materials provided with the distribution.
+*     * Neither the name of the Snowball Team
+*       nor the names of its contributors may be used 
+*       to endorse or promote products derived from this software without 
+*       specific prior written permission.
+*
+* THIS SOFTWARE IS PROVIDED BY Dr. Martin Porter and Richard Boulton 
+* ''AS IS'' AND ANY EXPRESS OR IMPLIED WARRANTIES, 
+* INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
+* WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+* DISCLAIMED. IN NO EVENT SHALL Sun Microsystems, Inc. BE LIABLE FOR ANY
+* DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
+* (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
+* LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND
+* ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+* (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
+* SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+----------------------------------------------------------------------------
+
+* JDOM
+* Copyright (C) 2000-2004 Jason Hunter & Brett McLaughlin.
+* All rights reserved.
+* 
+* Redistribution and use in source and binary forms, with or without
+* modification, are permitted provided that the following conditions
+* are met:
+* 
+* 1. Redistributions of source code must retain the above copyright
+*    notice, this list of conditions, and the following disclaimer.
+* 
+* 2. Redistributions in binary form must reproduce the above copyright
+*    notice, this list of conditions, and the disclaimer that follows 
+*    these conditions in the documentation and/or other materials 
+*    provided with the distribution.
+*
+* 3. The name "JDOM" must not be used to endorse or promote products
+*    derived from this software without prior written permission.  For
+*    written permission, please contact <request_AT_jdom_DOT_org>.
+* 
+* 4. Products derived from this software may not be called "JDOM", nor
+*    may "JDOM" appear in their name, without prior written permission
+*    from the JDOM Project Management <request_AT_jdom_DOT_org>.
+* 
+* In addition, we request (but do not require) that you include in the 
+* end-user documentation provided with the redistribution and/or in the 
+* software itself an acknowledgement equivalent to the following:
+*     "This product includes software developed by the
+*      JDOM Project (http://www.jdom.org/)."
+* Alternatively, the acknowledgment may be graphical using the logos 
+* available at http://www.jdom.org/images/logos.
+*
+* THIS SOFTWARE IS PROVIDED ``AS IS'' AND ANY EXPRESSED OR IMPLIED
+* WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES
+* OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+* DISCLAIMED.  IN NO EVENT SHALL THE JDOM AUTHORS OR THE PROJECT
+* CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+* SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+* LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF
+* USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND
+* ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
+* OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT
+* OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
+* SUCH DAMAGE.
+*
+* This software consists of voluntary contributions made by many 
+* individuals on behalf of the JDOM Project and was originally 
+* created by Jason Hunter <jhunter_AT_jdom_DOT_org> and
+* Brett McLaughlin <brett_AT_jdom_DOT_org>.  For more information
+* on the JDOM Project, please see <http://www.jdom.org/>. 
+
+----------------------------------------------------------------------------
+
+* OpenThesaurus-es 
+* Copyleft (C) 2007 Marcelo Garrone <marcelo.garrone@gmail.com>
+*
+* This program is free software; you can redistribute it and/or modify
+* it under the terms of the GNU General Public License as published by
+* the Free Software Foundation; either version 2 of the License, or (at
+* your option) any later version.
+
+----------------------------------------------------------------------------
+
+* Affective Norms for English Words (ANEW)
+* Copyright 2007 Psychonomic Society, Inc.
+* All rights reserved.
+
+----------------------------------------------------------------------------
+
+* Affective Norms for Spanish Words (ANSW)
+* Copyright 2007 Psychonomic Society, Inc.
+* All rights reserved.
+
+----------------------------------------------------------------------------
+
+* Apache Lucene
+* Copyright 2006 The Apache Software Foundation
+* 
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+* 
+* 	http://www.apache.org/licenses/LICENSE-2.0
+* 
+* Unless required by applicable law or agreed to in writing, software
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+
+----------------------------------------------------------------------------
+
+* Java Similarity Library
+* Copyright 2004 Nuno Seco
+* All rights reserved.
+
+----------------------------------------------------------------------------
+
+* Stanford POS Tagger
+* Copyright (c) 2002-2008 The Board of Trustees of 
+* The Leland Stanford Junior University
+* All Rights Reserved.
+*
+* This program is free software; you can redistribute it and/or
+* modify it under the terms of the GNU General Public License
+* as published by the Free Software Foundation; either version 2
+* of the License, or (at your option) any later version.
+*
+* This program is distributed in the hope that it will be useful,
+* but WITHOUT ANY WARRANTY; without even the implied warranty of
+* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+* GNU General Public License for more details.
+*
+* You should have received a copy of the GNU General Public License
+* along with this program; if not, write to the Free Software
+* Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
+*
+* For more information, bug reports, fixes, contact:
+*    Christopher Manning
+*    Dept of Computer Science, Gates 1A
+*    Stanford CA 94305-9010
+*    USA
+*    Support/Questions: java-nlp-user@lists.stanford.edu
+*	Licensing: java-nlp-support@lists.stanford.edu
+*    http://www-nlp.stanford.edu/software/tagger.shtml
+
+----------------------------------------------------------------------------
+
+* Spanish Data of the CoNLL 2002 Shared Task with POS tags
+* Copyright 2002 Xavier Carreras
+* All rights reserved.
+
+----------------------------------------------------------------------------
+
+* javax.servlet package
+* Copyright Sun Microsystems, Inc & Apache Software Foundation
+*
+* It is distributed under the Common Development and Distribution License.
+* You can obtain a copy of the license at 
+* https://glassfish.dev.java.net/public/CDDLv1.0.html.
+
+----------------------------------------------------------------------------
+
+* Balance CSS template
+* Design by Free CSS Templates
+* http://www.freecsstemplates.org
+* Released for free under a Creative Commons Attribution 2.5 License
+
+----------------------------------------------------------------------------
+
+* Checkstyle
+* Copyright (c) 2001-2010 The Checkstyle Team
+*
+* This program is free software; you can redistribute it and/or
+* modify it under the terms of the GNU General Public License
+* as published by the Free Software Foundation version 3.
+
+----------------------------------------------------------------------------
+
+* LingPipe
+* Alias-i ROYALTY FREE LICENSE VERSION 1
+* 
+* Copyright (c) 2003 Alias-i, Inc
+* All Rights Reserved
+* 
+* http://alias-i.com/lingpipe/licenses/lingpipe-license-1.txt
+
+----------------------------------------------------------------------------
+
+* WEKA
+* Copyright (C) 1998-2010  University of Waikato
+*
+* This program is free software; you can redistribute it and/or modify
+* it under the terms of the GNU General Public License as published by
+* the Free Software Foundation; either version 2 of the License, or (at
+* your option) any later version.
+
+----------------------------------------------------------------------------
+
+* Spanish WordNet
+* Copyright (c) Universitat Politecnica de Catalunya (UPC)
+*
+* This database is distributed under a specific usage license for
+* research purposes.  If you haven't obtained such a license, your
+* copy is illegal and you must destroy it immediately.
+
+* You can apply for a license at http://www.lsi.upc.edu/~nlp
+
+----------------------------------------------------------------------------
+
+* Jsoup
+* Copyright (c) 2009, 2010 Jonathan Hedley (jonathan@hedley.net)
+* 
+* Permission is hereby granted, free of charge, to any person obtaining 
+* a copy of this software and associated documentation files (the "Software"), 
+* to deal in the Software without restriction, including without limitation 
+* the rights to use, copy, modify, merge, publish, distribute, sublicense, 
+* and/or sell copies of the Software, and to permit persons to whom the 
+* Software is furnished to do so, subject to the following conditions:
+* 
+* The above copyright notice and this permission notice shall be included 
+* in all copies or substantial portions of the Software.
+* 
+* THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS 
+* OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, 
+* FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL 
+* THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER 
+* LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING 
+* FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER 
+* DEALINGS IN THE SOFTWARE.
+

@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/DTM/speech/!svn/ver/221/nlp/emolib/src/emolib/classifier/machinelearning/density
+END
+ClassConditionalDensity.java
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/DTM/speech/!svn/ver/221/nlp/emolib/src/emolib/classifier/machinelearning/density/ClassConditionalDensity.java
+END
+Gaussian.java
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/DTM/speech/!svn/ver/221/nlp/emolib/src/emolib/classifier/machinelearning/density/Gaussian.java
+END
+package.html
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/DTM/speech/!svn/ver/221/nlp/emolib/src/emolib/classifier/machinelearning/density/package.html
+END

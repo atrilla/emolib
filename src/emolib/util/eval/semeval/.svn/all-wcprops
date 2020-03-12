@@ -1,0 +1,107 @@
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/DTM/speech/!svn/ver/221/nlp/emolib/src/emolib/util/eval/semeval
+END
+sentiment.pl
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/DTM/speech/!svn/ver/221/nlp/emolib/src/emolib/util/eval/semeval/sentiment.pl
+END
+extractCategory.sh
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/DTM/speech/!svn/ver/86/nlp/emolib/src/emolib/util/eval/semeval/extractCategory.sh
+END
+classifyValence.sh
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/DTM/speech/!svn/ver/86/nlp/emolib/src/emolib/util/eval/semeval/classifyValence.sh
+END
+removeTags.sh
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/DTM/speech/!svn/ver/86/nlp/emolib/src/emolib/util/eval/semeval/removeTags.sh
+END
+splitCorpusSentiment.sh
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/DTM/speech/!svn/ver/86/nlp/emolib/src/emolib/util/eval/semeval/splitCorpusSentiment.sh
+END
+balanceSentimentDataset.sh
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/DTM/speech/!svn/ver/86/nlp/emolib/src/emolib/util/eval/semeval/balanceSentimentDataset.sh
+END
+README
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/DTM/speech/!svn/ver/86/nlp/emolib/src/emolib/util/eval/semeval/README
+END
+package.html
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/DTM/speech/!svn/ver/221/nlp/emolib/src/emolib/util/eval/semeval/package.html
+END
+termfreqs.py
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/DTM/speech/!svn/ver/202/nlp/emolib/src/emolib/util/eval/semeval/termfreqs.py
+END
+joiner.sh
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/DTM/speech/!svn/ver/86/nlp/emolib/src/emolib/util/eval/semeval/joiner.sh
+END
+splitCorpus.sh
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/DTM/speech/!svn/ver/86/nlp/emolib/src/emolib/util/eval/semeval/splitCorpus.sh
+END
+ExtractCoincidences.java
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/DTM/speech/!svn/ver/221/nlp/emolib/src/emolib/util/eval/semeval/ExtractCoincidences.java
+END
+SemevalCorpusCategorizerNN.java
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/DTM/speech/!svn/ver/221/nlp/emolib/src/emolib/util/eval/semeval/SemevalCorpusCategorizerNN.java
+END
+balanceDataset.sh
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/DTM/speech/!svn/ver/86/nlp/emolib/src/emolib/util/eval/semeval/balanceDataset.sh
+END
+valence.py
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/DTM/speech/!svn/ver/179/nlp/emolib/src/emolib/util/eval/semeval/valence.py
+END
+expandEmotions.sh
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/DTM/speech/!svn/ver/86/nlp/emolib/src/emolib/util/eval/semeval/expandEmotions.sh
+END
+extractDimentions.sh
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/DTM/speech/!svn/ver/86/nlp/emolib/src/emolib/util/eval/semeval/extractDimentions.sh
+END

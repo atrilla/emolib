@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="ASCII"?>
+
+<!--
+
+    File    : build.xml
+    Created : 6-Nov-2008
+    By      : atrilla
+  
+    Emolib - Emotional Library
+  
+    Copyright (c) 2008 Alexandre Trilla &
+    2007-2012 Enginyeria i Arquitectura La Salle (Universitat Ramon Llull)
+  
+    This file is part of Emolib.
+  
+    You should have received a copy of the rights granted with this
+    distribution of EmoLib. See COPYING.
+
+-->
+
+<project name="EmoLib" default="distribute" basedir=".">
+
+    <description>EmoLib build file</description>
+
+    <!-- Set global properties for this build -->
+    <!-- Set version -->
+    <property name="version" value="0.1.5"/>
+    <!-- Set directories -->
+    <property name="source_dir" location="src"/>
+    <property name="build_dir" location="build"/>
+    <property name="distribution_dir" location="dist"/>
+    <property name="library_dir" location="lib"/>
+    <property name="docum_dir" location="doc"/>
+
+    <!-- Set the classpath where library dependencies are to be found -->
+    <path id="classpath">
+        <pathelement path="${library_dir}"/>
+    </path>
+
+    <!-- Define the checkstyle Ant task -->
+    <taskdef resource="checkstyletask.properties"
+        classpath="${library_dir}/checkstyle-5.2-all.jar"/>
+
+    <!-- Define the compilation process -->
+    <target name="build" description="Compilation of the source code files" >
+        <echo message="Building process..."/>
+        <!-- JavaCC affairs -->
+        <echo message="Dealing with the JavaCC parser generator..."/>
+        <echo message="Spanish parser..."/>
+        <javacc 
+            target="${source_dir}/emolib/tokenizer/lexer/spanish/SpanishLexer.jj"
+            outputdirectory="${source_dir}/emolib/tokenizer/lexer/spanish"
+            javacchome="${library_dir}"/>
+        <echo message="English parser..."/>
+        <javacc 
+            target="${source_dir}/emolib/tokenizer/lexer/english/EnglishLexer.jj"
+            outputdirectory="${source_dir}/emolib/tokenizer/lexer/english"
+            javacchome="${library_dir}"/>
+        <!-- Create the binary directory structure -->
+        <mkdir dir="${build_dir}"/>
+        <!-- Check the coding style -->
+        <!-- Not compliant code: JavaCC, JavaSimLib, Snowball -->
+        <checkstyle config="data/code_checks.xml">
+            <fileset dir="${source_dir}">
+                <include name="**/*.java"/>
+                <exclude name="**/tokenizer/lexer/english/**"/>
+                <exclude name="**/tokenizer/lexer/spanish/**"/>
+                <exclude name="**/emolib/wsd/simlib/IndexBroker.java"/>
+                <exclude name="**/emolib/wsd/simlib/SimilarityAssessor.java"/>
+                <exclude name="**/emolib/wsd/simlib/WordNotFoundException.java"/>
+                <exclude name="**/emolib/stemmer/snowball/ext/*.java"/>
+                <exclude name="**/emolib/stemmer/snowball/Among.java"/>
+                <exclude name="**/emolib/stemmer/snowball/SnowballProgram.java"/>
+                <exclude name="**/emolib/stemmer/snowball/SnowballStemmer.java"/>
+            </fileset>
+            <formatter type="plain"/>
+        </checkstyle>
+        <!-- Compile the source code files -->
+        <echo message="Compiling the source code files..."/>
+        <javac srcdir="${source_dir}" destdir="${build_dir}" debug="on" debuglevel="lines,vars,source">
+            <classpath refid="classpath"/>
+        </javac>
+    </target>
+
+    <!-- Define the documentation process -->
+    <target name="document" depends="build" description="Generation of the javadocs" >
+        <echo message="Generating the javadocs..."/>
+        <mkdir dir="${docum_dir}"/>
+        <!-- Document all the sources -->
+        <javadoc destdir="${docum_dir}"
+            classpathref="classpath"
+            sourcepath="${source_dir}"
+            packagenames="*"
+            author="true"
+            use="false"
+            doctitle="${ant.project.name}"
+            windowtitle="${ant.project.name}"
+            overview="${source_dir}/overview.html">
+            <doctitle><![CDATA[<h1>${ant.project.name}</h1>]]></doctitle>
+        </javadoc>              
+    </target>
+
+    <!-- Define the whole distribution process -->
+    <target name="distribute" depends="document" description="Creation of the distribution" >
+        <echo message="Creating the self-contained standalone distribution..."/>
+        <!-- Create the distribution directory -->
+        <mkdir dir="${distribution_dir}"/>
+        <jar jarfile="${distribution_dir}/${ant.project.name}-${version}.jar" basedir="${build_dir}">
+            <!-- Append the beautiful readme files -->
+            <fileset dir="." casesensitive="yes">
+                <include name="README"/>
+                <include name="CREDITS"/>
+                <include name="COPYING"/>
+                <patternset>
+                    <include name="**/doc/**"/>
+                    <include name="**/conf/emolib.config.xml"/>
+                    <include name="**/data/qtag-spanish/**"/>
+                    <include name="**/data/openthesaurus-es/**"/>
+                    <include name="**/data/ANSW.dat"/>
+                    <include name="**/data/ANEW.dat"/>
+                    <include name="**/data/stanford-postagger/english/bidirectional-wsj-0-18.tagger"/>
+                    <include name="**/data/wn_index_simlib/**"/>
+                </patternset>
+            </fileset>
+            <fileset dir="${library_dir}" casesensitive="yes">
+                <exclude name="javacc.jar"/>
+                <exclude name="**/javax/**"/>
+                <exclude name="checkstyle*.jar"/>
+                <exclude name="**/junit/**"/>
+                <exclude name="**/hamcrest/**"/>
+            </fileset>
+        </jar>
+        <!-- Create the servlet distribution directory -->
+        <echo message="Creating the servlet distribution..."/>
+        <mkdir dir="${build_dir}/servlet"/>
+        <copy todir="${build_dir}/servlet">
+            <fileset dir="${source_dir}/emolib/util/servlet" includes="**/index.html"/>
+            <fileset dir="${source_dir}/emolib/util/servlet" includes="**/default.css"/>
+            <fileset dir="${source_dir}/emolib/util/servlet" includes="**/images/**"/>
+            <fileset dir="${source_dir}/emolib/util/servlet" includes="**/en/**"/>
+            <fileset dir="${source_dir}/emolib/util/servlet" includes="**/es/**"/>
+            <fileset dir="${source_dir}/emolib/util/servlet" includes="**/WEB-INF/web.xml"/>
+        </copy>
+        <mkdir dir="${build_dir}/servlet/en/WEB-INF/classes"/>
+        <copy todir="${build_dir}/servlet/WEB-INF/classes">
+            <fileset dir="${build_dir}" includes="**/emolib/util/servlet/en/*.class"/>
+            <fileset dir="${build_dir}" includes="**/emolib/util/servlet/es/*.class"/>
+        </copy>
+        <war destfile="${distribution_dir}/${ant.project.name}-servlet.war" basedir="${build_dir}/servlet" webxml="${build_dir}/servlet/WEB-INF/web.xml">
+        </war>
+    </target>
+
+    <!-- Define the functionality tests -->
+    <target name="test" depends="distribute" description="Performance of the functionality tests" >
+        <echo message="Running the classifier functionality tests..."/>
+        <junit printsummary="yes" haltonfailure="yes">
+            <classpath>
+                <pathelement location="${distribution_dir}/${ant.project.name}-${version}.jar"/>
+                <pathelement path="${library_dir}"/>
+            </classpath>
+            <test name="emolib.classifier.supervised.ARNReduced"/>
+            <test name="emolib.classifier.supervised.LSA"/>
+            <test name="emolib.classifier.supervised.MultinomialLogReg"/>
+            <test name="emolib.classifier.supervised.SupportVectorMachine"/>
+        </junit>
+    </target>
+
+    <target name="clean" description="Clean up" >
+        <!-- Delete the build and distribution directory trees -->
+        <echo message="Cleaning the binaries..."/>
+        <delete dir="${build_dir}"/>
+        <delete dir="${distribution_dir}"/>
+        <delete dir="${docum_dir}"/>
+        <delete quiet="false">
+            <fileset dir="${source_dir}/emolib/tokenizer/lexer/spanish">
+                <include name="*.java"/>
+            </fileset>
+            <fileset dir="${source_dir}/emolib/tokenizer/lexer/english">
+                <include name="*.java"/>
+            </fileset>
+        </delete>
+    </target>
+
+</project>

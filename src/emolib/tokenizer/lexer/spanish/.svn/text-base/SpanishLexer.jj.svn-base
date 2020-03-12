@@ -1,0 +1,212 @@
+/*
+ * File    : SpanishLexer.jj
+ * Created : 2007
+ * By      : dgarcia
+ *
+ * Modified: 7-Nov-2008
+ * By      : atrilla
+ *
+ * Emolib - Emotional Library
+ *
+ * Copyright (c) 2007 David Garcia &
+ * 2008 Alexandre Trilla &
+ * 2008 Enginyeria i Arquitectura La Salle (Universitat Ramon Llull)
+ *
+ * This file is part of Emolib.
+ *
+ * You should have received a copy of the rights granted with this
+ * distribution of EmoLib. See COPYING.
+ */
+
+options {
+  LOOKAHEAD = 1;
+  IGNORE_CASE = true;
+  BUILD_PARSER = true;
+  STATIC = false;
+}
+
+PARSER_BEGIN(SpanishLexer)
+
+package emolib.tokenizer.lexer.spanish;
+
+import java.io.*;
+
+import emolib.tokenizer.*;
+
+/**
+ * Inherits the common methods and functions from the Tokenizer and implements a
+ * Spanish lexical analyzer with JavaCC.
+ *
+ * <p>
+ * Spanish is the language aimed by default in EmoLib.
+ * The tokens used by this lexer correpond to the Spanish grammatical tokens proposed
+ * by David Garc&iacute;a.
+ * If other tagging guidelines are desired, refer to [Santorini, 1995] or the tagset
+ * proposed by the EAGLES group, used by the <a href="http://garraf.epsevg.upc.es/freeling/">FreeLing</a>
+ * project.
+ * </p>
+ * <p>
+ * Nouns, adjectives and verbs, the tokens that don't match with any of the given tags
+ * are considered to have affective meaning.
+ * </p>
+ * <p>
+ * No syntax is implemented in this lexer, thus a bag of words is used instead.
+ * </p>
+ * <p>
+ * --<br>
+ * [Santorini, 1995] Santorini, B., <i>"Part-of-Speech Tagging Guidelines for the Penn
+ * Treebank Project"</i>, (3rd revision, 2nd printing). Technical Report, Department of
+ * Computer and Information Science, University of Pennsylvania, 1995.
+ * </p>
+ *
+ * @author David Garc&iacute;a
+ * @author Alexandre Trilla (atrilla@salle.url.edu)
+ */
+public class SpanishLexer extends Tokenizer {
+
+    /**
+     * Void constructor needed to by the configuration manager to perform the instantiation.
+     */
+    public SpanishLexer() {
+    }
+
+
+    /*
+     * (non-Javadoc)
+     * @see emolib.tokenizer.Tokenizer#getNew(String initialization)
+     */
+    public Tokenizer getNew(String initialization) {
+        SpanishLexer lexerToReturn = new SpanishLexer(new StringReader(initialization));
+	return lexerToReturn;
+    }
+
+
+    /*
+     * (non-Javadoc)
+     * @see emolib.tokenizer.Tokenizer#parseGrammar()
+     */
+    public void parseGrammar() throws Exception {
+        parseSpanishGrammar();
+    }
+
+}
+
+PARSER_END(SpanishLexer)
+
+SKIP :
+{
+ 	<BLANK: " ">
+|	<TAB: "\t">
+|	<SALTO_LF: "\n" >
+|	<SALTO_CR: "\r" >
+|	<SALTO_CRLF: "\r\n" >
+}
+
+/**
+ * Determination of the accepted lexicon units (tokens) in the grammar.
+ */
+TOKEN: {
+        <ARTICULO_DETERMINADO: ("el") | ("la") | ("lo") | ("los") | ("las")>
+|	<ARTICULO_INDETERMINADO: ("un") | ("una") | ("unos") | ("unas")>
+|	<ARTICULO_FUSION: ("al") | ("del")>
+|	<PRONOMBRE_1: ("yo") | ("mí") | ("me") | ("conmigo") | ("nos") | ("nosotros")>
+| 	<PRONOMBRE_2: ("tú") | ("ti") | ("te") | ("contigo") | ("vos") | ("vosotros") | ("os")>
+| 	<PRONOMBRE_3: ("él") | ("ella") | ("ellos") | ("ellas") | ("le") | ("la") | ("lo") | ("se") | ("los") | ("las") | ("les") | ("se") | ("consigo")>
+|	<PRONOMBRE_REL: ("el cual") | ("la cual") | ("los cuales") | ("las cuales") | ("cuyo") | ("cuya") | ("cuyos") | ("cuyas")>
+|	<POSESIVO_1: ("mi") | ("mío") | ("mis") | ("míos") | ("mía") | ("mías") | ("nuestro") | ("nuestros") | ("nuestra") | ("nuestras")>
+|	<POSESIVO_2: ("tu") | ("tuyo") | ("tus") | ("tuyos") | ("tuya") | ("tuyas") | ("vuestro") | ("vuestros") | ("vuestra") | ("vuestras")>
+|	<POSESIVO_3: ("su") | ("suyo") | ("sus") | ("suyos") | ("suya") | ("suyas")>
+|	<INDEFINIDO_CUANTITATIVO:  ("todo") | ("toda") | ("todos") | ("todas") | ("tanto") | ("tantos") | ("tantas") | ("cuanto") | ("cuanta") | ("cuantos") | ("cuantas") | ("cuánto") | ("cuánta") | ("cuántos") | ("cuántas") | ("varios") | ("varias") | ("bastantes")>
+|	<INDEFINIDO_DISTRIBUTIVO: ("cada") | ("sendos") | ("otro") | ("otra") | ("otros") | ("otras") | ("cierto") | ("cierta") | ("ciertos") | ("ciertas") | ("algún") | ("alguna") | ("algunos") | ("algunas") | ("tal") | ("tales") | ("cualquiera") | ("cualesquiera") | ("ambos") | ("ambas")>
+|	<DEMOSTRATIVO: ("este") | ("estos") | ("esta") | ("estas") | ("esto") | ("ese") | ("esos") | ("esa") | ("esas") | ("eso") | ("aquel") | ("aquellos") | ("aquella") | ("aquellas") | ("aquello") | ("allí") | ("allá") | ("aquí") | ("acá") | ("ahí")>
+|	<ADVERBIO_LUGAR: ("aquí") | ("allí") | ("acá") | ("allá") | ("acullá") | ("aquende") | ("allende") | ("cerca") | ("lejos") | ("encima") | ("debajo") | ("arriba") | ("abajo") | ("dentro") | ("adentro") | ("fuera") | ("afuera") | ("junto")| ("delante") | ("enfrente") | ("detrás") | ("donde") | ("adonde") | ("dondequiera") | ("doquiera") | ("doquier")>
+|	<ADVERBIO_TIEMPO: ("hoy") | ("ayer") | ("anteayer") | ("mañana") | ("hogaño") | ("antaño") | ("ahora") | ("antes") | ("después") | ("luego") | ("entonces") | ("tarde") | ("temprano") | ("siempre") | ("nunca") | ("jamás") | ("alguna vez") | ("ya") | ("mientras") | ("aún") | ("todavía") | ("recientemente") | ("reciente")>
+|	<ADVERBIO_AFIRMACION: ("sí") | ("también") | ("cierto") | ("ciertamente") | ("efectivamente") | ("claro") | ("pues") | ("seguro")>
+|	<ADVERBIO_NEGACION: ("no") | ("ni") | ("tampoco") | ("nunca") | ("jamás") | ("acaso")>
+|	<ADVERBIO_PROBABILIDAD: ("seguramente") | ("quizá") | ("quizás") | ("tal vez")>
+|	<ADVERBIO_CUANTITATIVO_POS_3: ("mucho") | ("mucha") | ("muchos") | ("muchas") | ("muy") | ("completamente") | ("extremadamente") | ("absolutamente") | ("demasiado") | ("demasiada") | ("demasiados") | ("demasiadas")>
+|	<ADVERBIO_CUANTITATIVO_POS_2: ("más") | ("bastante") | ("tan") | ("tanta")>
+|	<ADVERBIO_CUANTITATIVO_POS_1: ("cercanamente") | ("suficiente") >
+|	<ADVERBIO_CUANTITATIVO_NEG_3: ("nada") | ("en absoluto")>
+|	<ADVERBIO_CUANTITATIVO_NEG_2: ("poco") | ("poca") | ("pocos") | ("pocas")>
+|	<ADVERBIO_CUANTITATIVO_NEG_1: ("casi") | ("apenas")>
+|	<ADVERBIO_MODO: ("bien") | ("mal") | ("mejor") | ("peor") | ("como") | ("tal") | ("cual") | ("así") | ("apenas") | ("despacio") | ("aprisa") | ("adrede") | ("aposta") | ("sólo") |  ((<LETRA>)+ ("mente"))>
+|	<PREPOSICION: ("a") | ("ante") | ("bajo") | ("cabe") | ("con") | ("contra") | ("de") | ("desde") | ("en") | ("entre") | ("hacia") | ("hasta") | ("para") | ("por") | ("según") | ("sin") | ("so") | ("sobre") | ("tras")>
+|	<CONJUNCION_DISYUNTIVA: ("o") | ("u")>
+|	<CONJUNCION_COPULATIVA: ("y") | ("e") | ("ni")>
+|	<CONJUNCION_ADVERSATIVA: ("mas") | ("pero") | ("empero") | ("aunque") | ("sino") | ("sin embargo")>
+|	<CONJUNCION_CAUSAL: ("porque") | ("pues que") | ("pues") | ("ya que") | ("como que") | ("como")>
+|	<CONJUNCION_FINAL: ("a que") | ("para que") | ("a fin de que")>
+|	<CONJUNCION_TEMPORAL: ("cuando") | ("desde que") | ("luego que") | ("antes que") | ("luego de que") | ("después que") | ("mientras que") | ("entretanto") | ("entretanto que")>
+|	<SIMBOLO_NEUTRO: (",") | (";") | (":") | ("...") | ("-") | ("+") | ("-") | ("/") | ("*") | ("\\") | ("(") | (")") 
+					 | ("<") | (">") |("=")>
+|	<ESPECIFICACION: ("<<") | (">>") | ("{") | ("}") | ("\"") | ("[") | ("]") >
+|	<INTERROGATIVA: ("?") | ("¿")>
+|	<EXCLAMATIVA: ("¡") | ("!")>
+|	<NUMERAL: ((<DIGITO>)((".") | (",") | ("/") | ("-"))*)+ >
+|	<DIGITO: ["0"-"9"]>
+|	<FIN_FRASE: (".")+ >
+|	<OTRO: (<LETRA> ("."))+ | (<LETRA>)+>
+|	<LETRA: ["a"-"z"] | ["á","é","í","ó","ú"] | ["ñ", "ç"]>
+|	<ESPECIAL: ~[]>
+
+}
+
+/**
+ * Method to check the syntax of the grammar.
+ */
+public void parseSpanishGrammar():
+{
+    Token t;
+    float defaultFloat = Float.parseFloat("0.0");
+}
+{
+    (t = <ARTICULO_DETERMINADO> {putWord(t.toString()); putWordClass(tokenImage[t.kind]); setPossibleEmotionalContent("false"); putModifierValue(defaultFloat);}
+    | t = <ARTICULO_INDETERMINADO> {putWord(t.toString()); putWordClass(tokenImage[t.kind]); setPossibleEmotionalContent("false"); putModifierValue(defaultFloat);}
+    | t = <ARTICULO_FUSION> {putWord(t.toString()); putWordClass(tokenImage[t.kind]); setPossibleEmotionalContent("false"); putModifierValue(defaultFloat);}
+    | t = <PRONOMBRE_1> {putWord(t.toString()); putWordClass(tokenImage[t.kind]); setPossibleEmotionalContent("false"); putModifierValue(defaultFloat);}
+    | t = <PRONOMBRE_2> {putWord(t.toString()); putWordClass(tokenImage[t.kind]); setPossibleEmotionalContent("false"); putModifierValue(defaultFloat);}
+    | t = <PRONOMBRE_3> {putWord(t.toString()); putWordClass(tokenImage[t.kind]); setPossibleEmotionalContent("false"); putModifierValue(defaultFloat);}
+    | t = <PRONOMBRE_REL> {putWord(t.toString()); putWordClass(tokenImage[t.kind]); setPossibleEmotionalContent("false"); putModifierValue(defaultFloat);}
+    
+    | t = <POSESIVO_1> {putWord(t.toString()); putWordClass(tokenImage[t.kind]); setPossibleEmotionalContent("false"); putModifierValue(defaultFloat);}
+    | t = <POSESIVO_2> {putWord(t.toString()); putWordClass(tokenImage[t.kind]); setPossibleEmotionalContent("false"); putModifierValue(defaultFloat);}
+    | t = <POSESIVO_3> {putWord(t.toString()); putWordClass(tokenImage[t.kind]); setPossibleEmotionalContent("false"); putModifierValue(defaultFloat);}
+    | t = <INDEFINIDO_CUANTITATIVO> {putWord(t.toString()); putWordClass(tokenImage[t.kind]); setPossibleEmotionalContent("false"); putModifierValue(defaultFloat);}
+    | t = <INDEFINIDO_DISTRIBUTIVO> {putWord(t.toString()); putWordClass(tokenImage[t.kind]); setPossibleEmotionalContent("false"); putModifierValue(defaultFloat);}
+    
+    | t = <DEMOSTRATIVO> {putWord(t.toString()); putWordClass(tokenImage[t.kind]); setPossibleEmotionalContent("false"); putModifierValue(defaultFloat);}
+    | t = <ADVERBIO_LUGAR> {putWord(t.toString()); putWordClass(tokenImage[t.kind]); setPossibleEmotionalContent("false"); putModifierValue(defaultFloat);}
+    | t = <ADVERBIO_TIEMPO> {putWord(t.toString()); putWordClass(tokenImage[t.kind]); setPossibleEmotionalContent("false"); putModifierValue(defaultFloat);}
+    | t = <ADVERBIO_AFIRMACION> {putWord(t.toString()); putWordClass(tokenImage[t.kind]); setPossibleEmotionalContent("false"); putModifierValue(defaultFloat);}
+    | t = <ADVERBIO_NEGACION> {putWord(t.toString()); putWordClass(tokenImage[t.kind]); setPossibleEmotionalContent("false"); putModifierValue(negation);}
+    
+    | t = <ADVERBIO_PROBABILIDAD> {putWord(t.toString()); putWordClass(tokenImage[t.kind]); setPossibleEmotionalContent("false"); putModifierValue(defaultFloat);}
+    | t = <ADVERBIO_CUANTITATIVO_POS_3> {putWord(t.toString()); putWordClass(tokenImage[t.kind]); setPossibleEmotionalContent("false"); putModifierValue(positiveModifier3);}
+    | t = <ADVERBIO_CUANTITATIVO_POS_2> {putWord(t.toString()); putWordClass(tokenImage[t.kind]); setPossibleEmotionalContent("false"); putModifierValue(positiveModifier2);}
+    | t = <ADVERBIO_CUANTITATIVO_POS_1> {putWord(t.toString()); putWordClass(tokenImage[t.kind]); setPossibleEmotionalContent("false"); putModifierValue(positiveModifier1);}
+    | t = <ADVERBIO_CUANTITATIVO_NEG_3> {putWord(t.toString()); putWordClass(tokenImage[t.kind]); setPossibleEmotionalContent("false"); putModifierValue(negativeModifier3);}
+    | t = <ADVERBIO_CUANTITATIVO_NEG_2> {putWord(t.toString()); putWordClass(tokenImage[t.kind]); setPossibleEmotionalContent("false"); putModifierValue(negativeModifier2);}
+    | t = <ADVERBIO_CUANTITATIVO_NEG_1> {putWord(t.toString()); putWordClass(tokenImage[t.kind]); setPossibleEmotionalContent("false"); putModifierValue(negativeModifier1);}
+    | t = <ADVERBIO_MODO> {putWord(t.toString()); putWordClass(tokenImage[t.kind]); setPossibleEmotionalContent("false"); putModifierValue(defaultFloat);}
+    
+    | t = <PREPOSICION> {putWord(t.toString()); putWordClass(tokenImage[t.kind]); setPossibleEmotionalContent("false"); putModifierValue(defaultFloat);}
+    | t = <CONJUNCION_DISYUNTIVA> {putWord(t.toString()); putWordClass(tokenImage[t.kind]); setPossibleEmotionalContent("false"); putModifierValue(defaultFloat);}
+    | t = <CONJUNCION_COPULATIVA> {putWord(t.toString()); putWordClass(tokenImage[t.kind]); setPossibleEmotionalContent("false"); putModifierValue(defaultFloat);}
+    | t = <CONJUNCION_ADVERSATIVA> {putWord(t.toString()); putWordClass(tokenImage[t.kind]); setPossibleEmotionalContent("false"); putModifierValue(defaultFloat);}
+    | t = <CONJUNCION_CAUSAL> {putWord(t.toString()); putWordClass(tokenImage[t.kind]); setPossibleEmotionalContent("false"); putModifierValue(defaultFloat);}
+    
+    | t = <CONJUNCION_TEMPORAL> {putWord(t.toString()); putWordClass(tokenImage[t.kind]); setPossibleEmotionalContent("false"); putModifierValue(defaultFloat);}
+    | t = <SIMBOLO_NEUTRO> {putWord(t.toString()); putWordClass(tokenImage[t.kind]); setPossibleEmotionalContent("false"); putModifierValue(defaultFloat);}
+    | t = <ESPECIFICACION> {putWord(t.toString()); putWordClass(tokenImage[t.kind]); setPossibleEmotionalContent("false"); putModifierValue(defaultFloat);}
+    | t = <INTERROGATIVA> {putWord(t.toString()); putWordClass(tokenImage[t.kind]); setPossibleEmotionalContent("false"); putModifierValue(defaultFloat);}
+    | t = <EXCLAMATIVA> {putWord(t.toString()); putWordClass(tokenImage[t.kind]); setPossibleEmotionalContent("false"); putModifierValue(defaultFloat);}
+    | t = <NUMERAL> {putWord(t.toString()); putWordClass(tokenImage[t.kind]); setPossibleEmotionalContent("false"); putModifierValue(defaultFloat);}
+    | t = <DIGITO> {putWord(t.toString()); putWordClass(tokenImage[t.kind]); setPossibleEmotionalContent("false"); putModifierValue(defaultFloat);}
+    
+    | t = <FIN_FRASE> {putWord(t.toString()); putWordClass(tokenImage[t.kind]); setPossibleEmotionalContent("false"); putModifierValue(defaultFloat);}
+    | t = <OTRO> {putWord(t.toString()); putWordClass(tokenImage[t.kind]); setPossibleEmotionalContent("true"); putModifierValue(defaultFloat);}
+    | t = <LETRA> {putWord(t.toString()); putWordClass(tokenImage[t.kind]); setPossibleEmotionalContent("false"); putModifierValue(defaultFloat);}
+    | t = <ESPECIAL> {putWord(t.toString()); putWordClass(tokenImage[t.kind]); setPossibleEmotionalContent("false"); putModifierValue(defaultFloat);}
+    )*
+}

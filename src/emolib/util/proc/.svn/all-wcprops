@@ -1,0 +1,59 @@
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/DTM/speech/!svn/ver/221/nlp/emolib/src/emolib/util/proc
+END
+ParagraphData.java
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/DTM/speech/!svn/ver/221/nlp/emolib/src/emolib/util/proc/ParagraphData.java
+END
+DataProcessingException.java
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/DTM/speech/!svn/ver/99/nlp/emolib/src/emolib/util/proc/DataProcessingException.java
+END
+WordData.java
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/DTM/speech/!svn/ver/221/nlp/emolib/src/emolib/util/proc/WordData.java
+END
+Data.java
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/DTM/speech/!svn/ver/99/nlp/emolib/src/emolib/util/proc/Data.java
+END
+DataProcessor.java
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/DTM/speech/!svn/ver/99/nlp/emolib/src/emolib/util/proc/DataProcessor.java
+END
+SentenceData.java
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/DTM/speech/!svn/ver/221/nlp/emolib/src/emolib/util/proc/SentenceData.java
+END
+TextData.java
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/DTM/speech/!svn/ver/221/nlp/emolib/src/emolib/util/proc/TextData.java
+END
+TextDataProcessor.java
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/DTM/speech/!svn/ver/221/nlp/emolib/src/emolib/util/proc/TextDataProcessor.java
+END
+package.html
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/DTM/speech/!svn/ver/221/nlp/emolib/src/emolib/util/proc/package.html
+END

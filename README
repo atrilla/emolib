@@ -1,0 +1,37 @@
+EmoLib: Emotional Library
+=========================
+
+EmoLib is a library that extracts the affect and emotions 
+from an incoming text by tagging such text according to 
+the feeling that is written or being conveyed.
+
+EmoLib has been coded in the Java programming language.
+
+----------
+
+This README text file only provides a general description of
+the project.
+
+In order to obtain the project's files organisation please refer
+to the HACKING text file included in the source code and
+development distributions of EmoLib.
+
+The information relating to the different modules that compose
+EmoLib are pertinently documented in the Javadocs.
+Please build the system first as indicated in the INSTALL file 
+and launch a web browser with the "doc/index.html" file, or else visit
+the [EmoLib online API](http://atrilla.net/data/files/emolibdoc/index.html).
+
+
+----------
+
+For any comment or suggestion of any kind, you may contact
+Alexandre Trilla
+
+    <alex@atrilla.net>
+
+As of March 2020, EmoLib has been open-souced under the MIT licence.
+
+Wishing that EmoLib may be useful to society, receive a most
+sincere and cordial salutation.
+

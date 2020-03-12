@@ -1,0 +1,47 @@
+EmoLib: Emotional Library
+=========================
+
+This INSTALL file explains the compilation process that
+has to be carried out in order to obtain a binary
+runnable distribution of EmoLib.
+
+The folder where this file is located is referred to as the
+root folder, "/emolib", and contains the 
+source code files, dependencies, and all the needed resources
+for the project.
+
+Once in the root folder, the Apache Ant builder will be in charge
+of the compilation process just by typing
+
+    ant
+
+The bytecodes of the library should be obtained within
+a few seconds.
+
+At the end of the process, three new folders should have been created:
+
+- /build: This folder contains all the built bytecodes of the project.
+- /dist: This folder contains the distribution files of the project,
+        which correspond to the compression of the bytecodes.
+- /doc: This folder contains the documentation, i.e. the javadocs.
+
+Bear in mind that the build tool of use with EmoLib, which is
+Apache Ant, needs to have extra libraries in order to be able
+to manage JavaCC as one of its tasks, for example. If the operating 
+system of choice to develop EmoLib is Debian GNU/Linux, then the
+apt repositories (Etch release at least) yield the "ant-optional"
+package which provides these extra libraries.
+Otherwise, refer to the project's main website available at:
+
+    http://ant.apache.org/
+
+The most useful resulting file is the distribution JAR of the project
+available in the "/dist" folder. This compressed file can then be
+included in the classpath of an application to profit from
+any benefits that EmoLib may offer.
+
+Please ensure that the XML configuration file for EmoLib has the
+correct paths to the needed resources.
+In order to ensure its correct configuration, run the
+"customise_path.sh" bash script in the "/conf" folder.
+

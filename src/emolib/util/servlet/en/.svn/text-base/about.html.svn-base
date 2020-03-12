@@ -1,0 +1,120 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!--
+Design by Free CSS Templates
+http://www.freecsstemplates.org
+Released for free under a Creative Commons Attribution 2.5 License
+
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>EmoLib analysis service</title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<link href="../default.css" rel="stylesheet" type="text/css" media="screen" />
+
+<script language="javascript" type="text/javascript" src="formval.js"></script>
+
+</head>
+
+<body>
+<!-- start header -->
+<div id="header">
+        <div id="logo">
+                <h1><font color="steelblue">Emo</font><font color="lightsteelblue">Lib</font></h1>
+                <p>Emotion identification from text</p>
+        </div>
+        <div id="menu">
+                <ul>
+                        <li><a href="index.html">Demo</a></li>
+                        <li class="current_page_item"><a href="about.html">About</a></li>
+                </ul>
+        </div>
+</div>
+<!-- end header -->
+<!-- start page -->
+<div id="page">
+        <!-- start content -->
+        <div id="content">
+                <div class="post greenbox">
+                        <div class="title">
+                                <h1>About</h1>
+                        </div>
+                        <div class="entry">
+                                <p>EmoLib is a library that extracts the affect and emotions from an incoming text by tagging such text according to the feeling that is written or being conveyed.</p>
+                                <p>The processing structure of EmoLib is built of several classes that define a modular framework, called a pipeline due to the sequentiality of the tagging process. This is the <b>AffectiveTagger</b>.</p>
+                                <p>The classes that define the architecture of EmoLib are described as follows:
+                                <ul>
+                                    <li>
+                                        <b>Tokenizer</b> - Splits a text string into 
+                                        individual units, called tokens. 
+                                        These tokens are expressed in regular patterns as established by the grammar of the language.
+                                        It is the INPUTTER of the pipeline.
+                                    </li>
+                                    <li>
+                                        <b>Sentence Splitter</b> - Segments
+                                        the incoming text into paragraphs and sentences.
+                                    </li>
+                                    <li>
+                                        <b>Part-Of-Speech Tagger</b> - Disambiguates the
+                                        function of nouns, verbs and adjectives in the sentence according to the context.
+                                    </li>
+                                    <li>
+                                        <b>Word Sense Disambiguator</b> - Determines
+                                        which is the correct sense of a word according to the context and stuffs the word in question
+                                        with the appropriate set of synonyms.
+                                    </li>
+                                    <li>
+                                        <b>Stemmer</b> - Strips the suffix of words
+                                        in order to group those which share a common meaning, thus improving Information Retrieval (IR) performance.
+                                    </li>
+                                    <li>
+                                        <b>Emotional Keyword Spotter</b> - Determines
+                                        the emotional dimensions of the words that have (an affective content) emotional dimensions.
+                                    </li>
+                                    <li>
+                                        <b>Statistic</b> - Computes
+                                        the average emotional dimensions of the words in the text.
+                                    </li>
+                                    <li>
+                                        <b>Classifier</b> - Labels the text with the most
+                                            appropriate emotion according to the affective attributes.
+                                    </li>
+                                    <li>
+                                        <b>Affective Formatter</b> - Presents the obtained results.
+                                        It is the OUTPUTTER of the pipeline.
+                                    </li>
+                                </ul>
+                                </p>
+
+                                <p>Please be careful doing some direct text "copy-paste" from the Internet since
+                                some buggy characters may cause the system to malfunction.</p>
+
+                                <p>EmoLib is presently being developed by
+                                <a href="http://www.salle.url.edu/~atrilla/">Alexandre Trilla</a> as part of his
+                                Ph.D. Thesis, under the advisory 
+                                of <a href="http://www.salle.url.edu/~falias">Francesc Al&iacute;as</a> at
+                                <a href="http://www.salle.url.edu/">Enginyeria i Arquitectura La Salle</a>,
+                                Universitat Ramon Llull, Barcelona, Spain.
+                                Feel free to contact them for any comment or suggestion of any kind.</p>
+                        </div>
+
+                        <div class="btm">
+                                <div class="l">
+                                        <div class="r">
+                                                <p class="meta"></p>
+                                        </div>
+                                </div>
+                        </div>
+                </div>
+        </div>
+        <!-- end content -->
+</div>
+<!-- end page -->
+<div style="clear: both;">&nbsp;</div>
+<div id="footer">
+        <p>Copyright &copy; 2007-2012 Enginyeria i Arquitectura La Salle (Universitat Ramon Llull)<br>
+        This service is maintained by <a href="http://www.salle.url.edu/~atrilla/">Alexandre Trilla</a> <a href="mailto:atrilla@salle.url.edu">(atrilla@salle.url.edu)</a></p>
+</div>
+</body>
+</html>

@@ -1,0 +1,77 @@
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/DTM/speech/!svn/ver/221/nlp/emolib/src/emolib/util/eval
+END
+ExampleTextFile.java
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/DTM/speech/!svn/ver/221/nlp/emolib/src/emolib/util/eval/ExampleTextFile.java
+END
+ConfusionMatrixCalculator.java
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/DTM/speech/!svn/ver/221/nlp/emolib/src/emolib/util/eval/ConfusionMatrixCalculator.java
+END
+CorpusPlotter.sci
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/DTM/speech/!svn/ver/221/nlp/emolib/src/emolib/util/eval/CorpusPlotter.sci
+END
+valenceCentroids.pl
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/DTM/speech/!svn/ver/221/nlp/emolib/src/emolib/util/eval/valenceCentroids.pl
+END
+centroids.pl
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/DTM/speech/!svn/ver/221/nlp/emolib/src/emolib/util/eval/centroids.pl
+END
+CreateTextClassData.java
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/DTM/speech/!svn/ver/221/nlp/emolib/src/emolib/util/eval/CreateTextClassData.java
+END
+SentencePrinter.java
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/DTM/speech/!svn/ver/221/nlp/emolib/src/emolib/util/eval/SentencePrinter.java
+END
+CorpusSentimentPlotter.sci
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/DTM/speech/!svn/ver/221/nlp/emolib/src/emolib/util/eval/CorpusSentimentPlotter.sci
+END
+include_tuples.pl
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/DTM/speech/!svn/ver/221/nlp/emolib/src/emolib/util/eval/include_tuples.pl
+END
+CorpusSpacePlotter.sci
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/DTM/speech/!svn/ver/221/nlp/emolib/src/emolib/util/eval/CorpusSpacePlotter.sci
+END
+CorpusVocabularyStatistics.java
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/DTM/speech/!svn/ver/221/nlp/emolib/src/emolib/util/eval/CorpusVocabularyStatistics.java
+END
+package.html
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/DTM/speech/!svn/ver/221/nlp/emolib/src/emolib/util/eval/package.html
+END

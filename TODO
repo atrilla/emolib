@@ -1,0 +1,45 @@
+* Adverbs ending with -mente could contain affective information, the lexer
+discards them. --> Weighting
+Sugimoto (3.2. Emotion Classification) supports this statement.
+
+* The "isimo" can't be removed by Snowball.
+
+* Coreference resolution -> Daume & Marcu
+
+* SentiWordNet for opininon mining -> positive/neg impressions
+
+* Sentiment assessment -> sensenet
+
+* Meta-emotions
+
+* Include abbreviations in the tokenizer (lexer), so far, no abbreviations are allowed.
+
+* Emotion dynamics, how emotion changes in speech. --> HTMM
+
+* Locutions.
+
+* Exclamations should raise the values of the emotions.
+
+* SLM for emotion language.
+
+* Grammatical weakness (Osherenko's paper): the bag-of-words of the EKS limits
+the systems.
+    * uses FWF.
+
+* Shallow parsing techniques (MINIPAR).
+
+* FindBugs, PMD
+
+* In the ARN-R
+    * code IDF (from LSA)
+    * code intercept feature (avoid disconnected graphs).
+    * incorporate MPQA dictionary of sentiment
+        * http://www.cs.pitt.edu/~wiebe/resources.html
+    * define appropriate supervised TW with classification.
+        * Review Lan Tan.
+        * Lan Tan's ITF TW method.
+    * Pattern Length
+
+* Check Logistic learning params. and optim. methods.
+
+* Check LSA learning params. and optim. methods.

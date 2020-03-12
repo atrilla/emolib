@@ -1,0 +1,118 @@
+<!--
+
+  File    : overview.html
+  Created : 7-Nov-2008
+  By      : atrilla
+ 
+  Emolib - Emotional Library
+ 
+  Copyright (c) 2008 Alexandre Trilla &
+  2007-2012 Enginyeria i Arquitectura La Salle (Universitat Ramon Llull)
+ 
+  This file is part of Emolib.
+
+  You should have received a copy of the rights granted with this
+  distribution of EmoLib. See COPYING.
+ 
+-->
+
+<body>
+
+EmoLib is a library that extracts the affect from text
+and tags it according to the feeling that is written or being conveyed.
+
+<p>
+The diagram below shows the general architecture of EmoLib:<br>
+<div align=center>
+<img src="doc-files/emolibarch.png">
+<br><i>Figure 1: Architecture diagram of EmoLib.</i>
+</div>
+</p>
+
+<p>
+The processing structure of EmoLib is built of several 
+primary abstract classes that define
+a sequential modular framework, i.e., a pipeline, 
+due to the dependencies in the tagging process.
+This pipeline is described in detail in the <b><a href="emolib/AffectiveTagger.html">AffectiveTagger</a></b>.
+</p>
+
+<p>
+The actual (concrete) classes that perform the Natural Language
+Processing (NLP) tasks (identified in Figure 1 inside the Tagger block)
+inherit the common language-processing-wise methods and functions defined by these parent
+(abstract) classes. By following this specification, the system gains an additional degree of
+flexibility, scalability and maintainability. This responds to the need of
+obtaining a complete modular configurable framework for EmoLib.
+</p>
+
+<p>
+The primary abstract classes that define the architecture of EmoLib are described as
+follows:
+<ul>
+    <li>
+        <b><a href="emolib/tokenizer/Tokenizer.html">Tokenizer</a></b> - Splits a text string into 
+        individual units, called tokens, creating the data structure.
+        These tokens are expressed in regular patterns as established by the grammar of the language.
+        It is the INPUTTER of the pipeline.
+    </li>
+    <li>
+        <b><a href="emolib/splitter/SentenceSplitter.html">Sentence Splitter</a></b> - Segments
+        the incoming text into paragraphs and sentences.
+    </li>
+    <li>
+        <b><a href="emolib/pos/POSTagger.html">Part-Of-Speech Tagger</a></b> - Disambiguates the
+        function of nouns, verbs and adjectives in the sentence according to the context.
+    </li>
+    <li>
+        <b><a href="emolib/wsd/WordSenseDisambiguator.html">Word Sense Disambiguator</a></b> - Determines
+        the correct sense of the words according to the context and extracts
+        the appropriate set of synonyms.
+    </li>
+    <li>
+        <b><a href="emolib/stemmer/Stemmer.html">Stemmer</a></b> - Strips the suffix of words
+        in order to index those which share a common meaning, thus improving Information Retrieval (IR) performance.
+    </li>
+    <li>
+        <b><a href="emolib/eks/EmotionalKeywordSpotter.html">Emotional Keyword Spotter</a></b> - Determines
+        the emotional dimensions of the words that have an affective content.
+    </li>
+    <li>
+        <b><a href="emolib/statistic/Statistic.html">Statistic</a></b> - Computes
+        the averaged emotional dimensions of the words in the text.
+    </li>
+    <li>
+        <b><a href="emolib/classifier/Classifier.html">Classifier</a></b> - Labels the text with the most
+            appropriate affective tag according to the affective attributes.
+    </li>
+    <li>
+        <b><a href="emolib/formatter/AffectiveFormatter.html">Affective Formatter</a></b> - Presents the obtained results
+        in a usable XML format in order to integrate it as a tool into a broader project.
+        It is the OUTPUTTER of the pipeline.
+    </li>
+</ul>
+</p>
+
+<p>
+There's also an external monitor, i.e., the
+<b><a href="emolib/util/printer/Printer.html">Printer</a></b>, to help show the information (data) 
+that flows in the processing pipeline in order to check that the
+different modules that build the chain work correctly.
+</p>
+
+<p>
+The configuration issues are conducted by the 
+<b><a href="emolib/util/conf/ConfigurationManager.html">Configuration Manager</a></b>, which receives the
+specific configuration from an external XML config file. 
+This system has been taken from the Sphinx-4 speech recognition project, so please
+refer to the pertinent documentation on the configuration specifications
+at the <a href="http://cmusphinx.sourceforge.net/sphinx4/javadoc/edu/cmu/sphinx/util/props/doc-files/ConfigurationManagement.html">Configuration Management for Sphinx-4</a>.
+</p>
+
+<p>
+It is believed that the availability of a simple code is the best possible documentation
+in order to begin using EmoLib. See <a href="doc-files/EmoLibSimpleExample.html">EmoLib Simple Example</a>
+for further details.
+</p>
+
+</body>

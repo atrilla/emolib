@@ -1,0 +1,86 @@
+<!--
+
+  File    : EmoLibSimpleExample.html
+  Created : 24-Nov-2008
+  By      : atrilla
+ 
+  Emolib - Emotional Library
+ 
+  Copyright (c) 2008 Alexandre Trilla &
+  2007-2012 Enginyeria i Arquitectura La Salle (Universitat Ramon Llull)
+ 
+  This file is part of Emolib.
+
+  You should have received a copy of the rights granted with this
+  distribution of EmoLib. See COPYING.
+ 
+-->
+
+<html>
+
+<head>
+    <title>EmoLib Simple Example</title>
+    <style TYPE="text/css">
+        pre { padding: 2mm; border-style: ridge; background: #f0f8ff; color: teal;}
+        code {font-size: medium; color: teal}
+    </style>
+</head>
+
+<body>
+    <table bgcolor="#99CCFF" width="100%">
+        <tr>
+            <td align=center width="100%">
+                <center><h1>EmoLib Simple Example</h1></center>
+            </td>
+        </tr>
+    </table>
+    <p>
+    EmoLib has been designed with modularity in mind. The whole system is described
+    with a pipeline of text-data processors that produce the affective tagging
+    pursued by this system.
+    </p>
+    <p>
+    The best possible documentation about the usage of EmoLib is yielded by a simple
+    example code. This one shows how to declare and initialise an instance of EmoLib,
+    which accepts a plain text file and
+    returns a XML results file with the appropriate affective information.
+    </p>
+    <p>
+    In order to use EmoLib, two essential parts are required: the
+    <b>initialisation</b> and the <b>processing</b>.
+    </p>
+
+    <h1>Initialisation</h1>
+    <p>
+    This part is constituted by the declaration and instantiation of the basic
+    components of EmoLib.
+    The associated source code is shown as follows:<br><br>
+    <code>
+            // Location of the XML configuration file<br>
+            URL configFile = new File("emolib.config.xml").toURI().toURL();<br>
+            // Declaration and instantiation of the Configuration Manager<br>
+            ConfigurationManager cm = new ConfigurationManager(configFile);<br>
+            // Declaration and instantiation of the AffectiveTagger through the Configuration Manager<br>
+            AffectiveTagger tagger = (AffectiveTagger)cm.lookup("&lt;language&gt;_tagger");<br>
+    </code>
+    The &lt;language&gt; tag above refers to the appropriate text processing pipeline configuration for
+    the language of use according to the configuration file.
+    </p>
+
+    <h1>Processing</h1>
+    <p>
+    This part is constituted by the method and function calls in order to feed the system
+    with the text to process and to retrieve the results produced by EmoLib.
+    The associated source code is shown as follows:<br><br>
+    <code>
+                // Feeding of the system<br>
+                tagger.inputData(text_paragraph);<br>
+                // Repetition until no more paragraphs are left in the document<br>
+                // Retrieval of the processed text<br>
+                tagger.outputData();
+    </code>
+    </p>
+    <p>
+    A direct implementation of this code is available in the "emolib.util.eval.ExampleTextFile" class.
+    </p>
+</body>

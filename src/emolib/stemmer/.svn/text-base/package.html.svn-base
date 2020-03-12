@@ -1,0 +1,23 @@
+<!--
+
+  File    : package.html
+  Created : 19-Nov-2008
+  By      : atrilla
+ 
+  Emolib - Emotional Library
+ 
+  Copyright (c) 2008 Alexandre Trilla &
+  2007-2012 Enginyeria i Arquitectura La Salle (Universitat Ramon Llull)
+ 
+  This file is part of Emolib.
+ 
+  You should have received a copy of the rights granted with this
+  distribution of EmoLib. See COPYING.
+
+-->
+
+<body>
+
+Provides a high-level class to perform the stemming process.
+
+</body>
